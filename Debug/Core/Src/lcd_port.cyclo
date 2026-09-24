@@ -1,0 +1,4 @@
+../Core/Src/lcd_port.c:55:13:lcd_send_cmd	2
+../Core/Src/lcd_port.c:72:13:lcd_send_color	2
+../Core/Src/lcd_port.c:97:6:HAL_SPI_TxCpltCallback	2
+../Core/Src/lcd_port.c:106:6:lcd_init	1
