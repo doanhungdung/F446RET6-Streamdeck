@@ -66,40 +66,6 @@ static uint8_t Buttons_Scan(void);
 /* USER CODE BEGIN 0 */
 
 /* ============================================================================
- *  1. ẢNH HIỂN THỊ TRÊN MÀN HÌNH
- *
- *  Muốn thêm / bớt ảnh chỉ cần sửa 2 chỗ: dòng "extern" và bảng image_table[].
- *  Tên biến ảnh (hcmute_pixel, hcmute_dore...) phải trùng với tên trong file .c đã convert.
- * ========================================================================== */
-extern const lv_image_dsc_t hcmute_logo;   /* hcmute_logo.c  */
-extern const lv_image_dsc_t hcmute_pixel;  /* hcmute_pixel.c */
-extern const lv_image_dsc_t hcmute_dore;   /* hcmute_dore.c  */
-
-static const lv_image_dsc_t *const image_table[] = {
-    &hcmute_logo,
-    &hcmute_pixel,
-    &hcmute_dore,
-};
-#define IMAGE_COUNT  (sizeof(image_table) / sizeof(image_table[0]))
-
-static lv_obj_t *image_obj   = NULL;   /* đối tượng LVGL đang hiển thị ảnh          */
-static uint8_t   image_index = 0;      /* ảnh đang hiển thị; sau khi ấn giữ = ảnh đã lưu */
-
-/**
-  * @brief  Chuyển sang ảnh kế tiếp (step > 0) hoặc ảnh trước đó (step < 0).
-  *         Quay vòng: ảnh cuối -> ảnh đầu và ngược lại.
-  */
-static void Image_Change(int8_t step)
-{
-    if (step > 0)
-        image_index = (uint8_t)((image_index + 1U) % IMAGE_COUNT);
-    else
-        image_index = (uint8_t)((image_index + IMAGE_COUNT - 1U) % IMAGE_COUNT);
-
-    lv_image_set_src(image_obj, image_table[image_index]);
-}
-
-/* ============================================================================
  *  2. USB HID (bàn phím + phím media)
  * ========================================================================== */
 extern USBD_HandleTypeDef hUsbDeviceFS;
@@ -289,10 +255,8 @@ static void Buttons_Handle(void)
 /* ============================================================================
  *  4. ENCODER (TIM3) + NÚT NHẤN ENCODER (PC8)
  *
- *  Nút nhấn encoder:
- *    - Ấn 1 lần : Volume <-> Brightness
- *    - Ấn 2 lần : vào chế độ chọn ảnh (xoay encoder để đổi ảnh)
- *    - Ấn giữ   : (đang ở chế độ chọn ảnh) LƯU ảnh đang hiển thị và thoát về Volume
+ *  Nút nhấn encoder phân biệt 3 kiểu: ấn 1 lần / ấn 2 lần / ấn giữ (EB_SINGLE,
+ *  EB_DOUBLE, EB_LONG). Việc mỗi kiểu làm gì tùy màn hình, xem mục 5.
  * ========================================================================== */
 #define ENCODER_DIV     4      /* số xung TIM3 ứng với 1 nấc xoay */
 
@@ -300,10 +264,8 @@ static void Buttons_Handle(void)
 #define EB_DBL_MS       350u   /* cửa sổ chờ lần nhấn thứ 2 */
 #define EB_LONG_MS      800u   /* ngưỡng nhấn giữ */
 
-typedef enum { MODE_VOLUME = 0, MODE_BRIGHTNESS, MODE_IMAGE } app_mode_t;
 typedef enum { EB_NONE = 0, EB_SINGLE, EB_DOUBLE, EB_LONG } enc_evt_t;
 
-static app_mode_t app_mode = MODE_VOLUME;
 static int16_t enc_last_count = 0;
 
 /* Trả về +1 / -1 khi xoay đủ 1 nấc, 0 nếu chưa đủ */
@@ -350,46 +312,387 @@ static enc_evt_t Encoder_ButtonEvent(void)
     return EB_NONE;
 }
 
-/* Xử lý sự kiện nút nhấn encoder -> đổi chế độ */
-static void Mode_Handle(enc_evt_t e)
+/* ============================================================================
+ *  5. GIAO DIỆN CHỮ: HOME / MENU / THEME / BRIGHTNESS / GAME
+ *
+ *  Cách điều khiển bằng encoder:
+ *
+ *    Màn hình    | Xoay            | Ấn 1 lần         | Ấn 2 lần | Ấn giữ
+ *    ------------+-----------------+------------------+----------+---------
+ *    HOME        | Volume +/-      | Mute             | vào MENU | -
+ *    MENU        | chọn mục        | vào mục đã chọn  | -        | về HOME
+ *    THEME       | đổi theme (màu / hình) | xong (về MENU) | -   | về MENU
+ *    BRIGHTNESS  | chỉnh độ sáng   | xong (về MENU)   | -        | về MENU
+ *    GAME        | di chuyển       | chơi lại (khi thua) | -     | về MENU
+ *
+ *  Toàn bộ giao diện chỉ dùng 5 label, tạo 1 lần trong UI_Init(); mỗi lần trạng
+ *  thái đổi thì UI_Render() cập nhật lại chữ / vị trí / ẩn hiện.
+ * ========================================================================== */
+typedef enum { SCR_HOME = 0, SCR_MENU, SCR_THEME, SCR_BRIGHT, SCR_GAME } screen_t;
+
+/* ----- Các mục trong MENU: thêm mục mới chỉ cần thêm 1 dòng ở đây ---------- */
+typedef struct { const char *name; screen_t target; } menu_item_t;
+
+static const menu_item_t menu_items[] = {
+    { "Theme",      SCR_THEME  },
+    { "Brightness", SCR_BRIGHT },
+    { "Game",       SCR_GAME   },
+};
+#define MENU_COUNT  (sizeof(menu_items) / sizeof(menu_items[0]))
+
+/* ----- Theme: màu nền + màu chữ (0xRRGGBB), có thể kèm ảnh nền -------------
+ *  img = NULL      : theme chỉ có màu
+ *  img = &tên_ảnh  : theme có hình; ảnh hiện sau chữ, bg là màu viền quanh ảnh
+ *                    (nếu ảnh nhỏ hơn màn hình), fg là màu chữ đặt trên nền đen mờ.
+ *  Muốn thêm ảnh: thêm dòng extern + 1 dòng trong bảng. Ảnh đầu bảng là ảnh lúc khởi động.
+ */
+extern const lv_image_dsc_t hcmute_logo;    /* hcmute_logo.c  */
+extern const lv_image_dsc_t hcmute_pixel;   /* hcmute_pixel.c */
+extern const lv_image_dsc_t hcmute_dore;    /* hcmute_dore.c  */
+
+typedef struct {
+    const char           *name;
+    uint32_t              bg;
+    uint32_t              fg;
+    const lv_image_dsc_t *img;
+} theme_t;
+
+static const theme_t themes[] = {
+    { "HCMUTE",   0xFFFFFF, 0xFFFFFF, &hcmute_logo  },
+    { "Pixel",    0xFFFFFF, 0xFFFFFF, &hcmute_pixel },
+    { "Doraemon", 0xFFFFFF, 0xFFFFFF, &hcmute_dore  },
+    { "Dark",     0x000000, 0xFFFFFF, NULL },
+    { "Light",    0xFFFFFF, 0x000000, NULL },
+};
+#define THEME_COUNT (sizeof(themes) / sizeof(themes[0]))
+
+/* ----- Game "Catch": hứng vật rơi bằng cách xoay encoder -------------------
+ *  Màn hình 240x240 chia thành lưới 8 cột. Hàng trên cùng dành cho điểm số,
+ *  còn lại 7 hàng để chơi. Người chơi "U" ở hàng cuối, vật "o" rơi từ trên xuống.
+ *  Hứng được thì +1 điểm và rơi nhanh hơn; hụt thì thua.
+ */
+#define GAME_COLS     8u
+#define GAME_ROWS     7u
+#define GAME_CELL     30      /* mỗi ô 30x30 px -> 8 cột = 240 px            */
+#define GAME_TOP      30      /* hàng chữ điểm số nằm ở y = 0..29            */
+#define GAME_START_MS 450u    /* thời gian rơi 1 hàng lúc mới bắt đầu        */
+#define GAME_MIN_MS   150u    /* nhanh nhất                                  */
+
+static uint8_t  game_player_col;
+static uint8_t  game_item_col;
+static uint8_t  game_item_row;
+static uint16_t game_score;
+static uint32_t game_period;      /* ms cho mỗi lần rơi 1 hàng */
+static uint32_t game_last_tick;
+static uint8_t  game_over;
+
+/* ----- Trạng thái chung ---------------------------------------------------- */
+static screen_t    screen        = SCR_HOME;
+static uint8_t     menu_index    = 0;
+static uint8_t     theme_index   = 0;
+static const char *home_status   = "Volume";
+static const char *bright_status = "Rotate to conf";
+
+/* Ảnh nền (chỉ hiện khi theme có hình) + 5 label của giao diện */
+static lv_obj_t *bg_img;       /* ảnh nền, nằm dưới cùng              */
+static lv_obj_t *lbl_title;    /* tiêu đề (hoặc điểm số khi chơi game) */
+static lv_obj_t *lbl_body;     /* nội dung chính ở giữa                */
+static lv_obj_t *lbl_hint;     /* dòng hướng dẫn nhỏ ở dưới            */
+static lv_obj_t *lbl_player;   /* "U" trong game                       */
+static lv_obj_t *lbl_item;     /* "o" trong game                       */
+
+static void UI_Render(void);
+
+/* Tăng / giảm chỉ số, quay vòng khi vượt biên */
+static uint8_t Wrap(uint8_t index, int8_t step, uint8_t count)
 {
-    switch (e)
+    if (step > 0)
+        return (uint8_t)((index + 1U) % count);
+    return (uint8_t)((index + count - 1U) % count);
+}
+
+static void Show(lv_obj_t *obj, uint8_t visible)
+{
+    if (visible) lv_obj_remove_flag(obj, LV_OBJ_FLAG_HIDDEN);
+    else         lv_obj_add_flag(obj, LV_OBJ_FLAG_HIDDEN);
+}
+
+/* ----- Theme ---------------------------------------------------------------- */
+
+/* Áp theme hiện tại: màu nền, màu chữ và ảnh nền (nếu theme có hình).
+ *  - Theme có hình: ảnh nằm sau chữ, chữ được đặt trên nền đen mờ cho dễ đọc.
+ *  - Màn hình GAME bỏ ảnh, dùng nền đen chữ trắng để khỏi rối mắt.
+ */
+static void Theme_Apply(void)
+{
+    const theme_t *t       = &themes[theme_index];
+    lv_obj_t      *scr     = lv_screen_active();
+    uint8_t        show_img = (t->img != NULL) && (screen != SCR_GAME);
+    uint32_t       bg      = t->bg;
+    uint32_t       fg      = t->fg;
+    lv_opa_t       plate   = show_img ? LV_OPA_60 : LV_OPA_TRANSP;
+
+    if (t->img != NULL && screen == SCR_GAME)
     {
-    case EB_SINGLE:
-        if (app_mode == MODE_VOLUME)          app_mode = MODE_BRIGHTNESS;
-        else if (app_mode == MODE_BRIGHTNESS) app_mode = MODE_VOLUME;
+        bg = 0x000000;
+        fg = 0xFFFFFF;
+    }
+
+    lv_obj_set_style_bg_color(scr, lv_color_hex(bg), LV_PART_MAIN);
+    lv_obj_set_style_bg_opa(scr, LV_OPA_COVER, LV_PART_MAIN);
+
+    /* Màu chữ đặt ở màn hình, các label con tự kế thừa */
+    lv_obj_set_style_text_color(scr, lv_color_hex(fg), LV_PART_MAIN);
+
+    if (show_img) lv_image_set_src(bg_img, t->img);
+    Show(bg_img, show_img);
+
+    /* Nền đen mờ sau chữ: chỉ bật khi đang hiện ảnh */
+    lv_obj_set_style_bg_opa(lbl_title, plate, LV_PART_MAIN);
+    lv_obj_set_style_bg_opa(lbl_body,  plate, LV_PART_MAIN);
+    lv_obj_set_style_bg_opa(lbl_hint,  plate, LV_PART_MAIN);
+}
+
+/* ----- Game ------------------------------------------------------------------ */
+static void Game_Spawn(void)
+{
+    game_item_col = (uint8_t)lv_rand(0, GAME_COLS - 1U);
+    game_item_row = 0;
+}
+
+static void Game_Start(void)
+{
+    game_player_col = GAME_COLS / 2U;
+    game_score      = 0;
+    game_period     = GAME_START_MS;
+    game_over       = 0;
+    game_last_tick  = HAL_GetTick();
+    Game_Spawn();
+}
+
+/* Xoay encoder: dịch người chơi sang trái / phải, không quay vòng */
+static void Game_Move(int8_t step)
+{
+    if (game_over) return;
+
+    if (step > 0 && game_player_col < GAME_COLS - 1U) game_player_col++;
+    if (step < 0 && game_player_col > 0U)             game_player_col--;
+}
+
+/* Gọi liên tục trong vòng lặp chính: cho vật rơi mỗi khi hết game_period */
+static void Game_Update(void)
+{
+    if (screen != SCR_GAME || game_over) return;
+    if (HAL_GetTick() - game_last_tick < game_period) return;
+
+    game_last_tick = HAL_GetTick();
+    game_item_row++;
+
+    if (game_item_row >= GAME_ROWS - 1U)          /* vật đã chạm hàng của người chơi */
+    {
+        if (game_item_col == game_player_col)     /* hứng được */
+        {
+            game_score++;
+            if (game_period > GAME_MIN_MS) game_period -= 10U;
+            Game_Spawn();
+        }
+        else                                      /* hụt -> thua */
+        {
+            game_over = 1;
+        }
+    }
+    UI_Render();
+}
+
+/* ----- Vẽ giao diện theo trạng thái hiện tại --------------------------------- */
+static void UI_Render(void)
+{
+    char    text[96];
+    int     len = 0;
+    uint8_t i;
+
+    /* Mặc định: hiện tiêu đề + nội dung + hướng dẫn. Game sẽ đổi lại bên dưới. */
+    Show(lbl_body,   1);
+    Show(lbl_hint,   1);
+    Show(lbl_player, 0);
+    Show(lbl_item,   0);
+
+    switch (screen)
+    {
+    case SCR_HOME:
+    	lv_label_set_text(lbl_title, "Volume");
+        lv_label_set_text(lbl_hint,  home_status);
+        Show(lbl_body,0);
         break;
 
-    case EB_DOUBLE:
-        if (app_mode == MODE_VOLUME) app_mode = MODE_IMAGE;
+    case SCR_MENU:
+        /* Mục đang chọn được đặt trong ngoặc: [ Theme ] */
+        for (i = 0; i < MENU_COUNT; i++)
+        {
+            if (i > 0) text[len++] = '\n';
+            if (i == menu_index)
+                len += lv_snprintf(text + len, sizeof(text) - len, "[ %s ]", menu_items[i].name);
+            else
+                len += lv_snprintf(text + len, sizeof(text) - len, "%s", menu_items[i].name);
+        }
+        lv_label_set_text(lbl_title, "MENU");
+        lv_label_set_text(lbl_body,  text);
+        Show(lbl_hint,0);
         break;
 
-    case EB_LONG:
-        /* Lưu ảnh: image_index đang trỏ đúng ảnh đang hiển thị nên chỉ cần thoát chế độ,
-         * ảnh sẽ được giữ nguyên trên màn hình. */
-        if (app_mode == MODE_IMAGE) app_mode = MODE_VOLUME;
+    case SCR_THEME:
+        lv_label_set_text(lbl_title, "THEME");
+        lv_label_set_text_fmt(lbl_body, "%s\n%d/%d", themes[theme_index].name,
+                              (int)theme_index + 1, (int)THEME_COUNT);
         break;
 
-    default:
+    case SCR_BRIGHT:
+        lv_label_set_text(lbl_title, "BRIGHTNESS");
+        lv_label_set_text(lbl_body,  bright_status);
+        Show(lbl_hint,0);
+        break;
+
+    case SCR_GAME:
+        lv_label_set_text_fmt(lbl_title, "Score: %d", (int)game_score);
+
+        Show(lbl_hint,   0);
+        Show(lbl_player, 1);
+        Show(lbl_item,   1);
+        Show(lbl_body,   game_over);              /* chỉ hiện khi thua */
+        lv_label_set_text(lbl_body, "Hoc lai T_T");
+        lv_obj_set_pos(lbl_player, game_player_col * GAME_CELL,
+                       GAME_TOP + (GAME_ROWS - 1U) * GAME_CELL);
+        lv_obj_set_pos(lbl_item,   game_item_col * GAME_CELL,
+                       GAME_TOP + game_item_row * GAME_CELL);
         break;
     }
 }
 
-/* Xử lý khi xoay encoder: tùy chế độ mà làm việc khác nhau */
-static void Encoder_Rotate(int8_t step)
+/* Chuyển sang màn hình khác */
+static void Screen_Go(screen_t next)
 {
-    switch (app_mode)
+    screen = next;
+    if (next == SCR_GAME) Game_Start();
+    Theme_Apply();                 /* GAME bỏ ảnh nền, các màn hình khác hiện lại */
+    UI_Render();
+}
+
+/* Tạo ảnh nền và các label 1 lần lúc khởi động (gọi sau lcd_init) */
+static void UI_Init(void)
+{
+    lv_obj_t *scr = lv_screen_active();
+    lv_obj_t *text_labels[3];
+    uint8_t   i;
+
+    lv_obj_remove_flag(scr, LV_OBJ_FLAG_SCROLLABLE);
+
+    /* Tạo ảnh nền TRƯỚC để nó nằm dưới các label */
+    bg_img = lv_image_create(scr);
+    lv_obj_center(bg_img);
+
+    lbl_title  = lv_label_create(scr);
+    lbl_body   = lv_label_create(scr);
+    lbl_hint   = lv_label_create(scr);
+    lbl_player = lv_label_create(scr);
+    lbl_item   = lv_label_create(scr);
+
+    /* Tiêu đề, nội dung, hướng dẫn: chữ canh giữa, có nền đen mờ ôm sát chữ
+     * (độ mờ do Theme_Apply() bật/tắt tùy theme có hình hay không) */
+    text_labels[0] = lbl_title;
+    text_labels[1] = lbl_body;
+    text_labels[2] = lbl_hint;
+    for (i = 0; i < 3; i++)
     {
-    case MODE_VOLUME:
-        HID_Consumer_Press(step > 0 ? VOL_INC_BIT : VOL_DEC_BIT);
+        lv_obj_set_style_text_align(text_labels[i], LV_TEXT_ALIGN_CENTER, LV_PART_MAIN);
+        lv_obj_set_style_bg_color(text_labels[i], lv_color_black(), LV_PART_MAIN);
+        lv_obj_set_style_pad_hor(text_labels[i], 8, LV_PART_MAIN);
+        lv_obj_set_style_pad_ver(text_labels[i], 2, LV_PART_MAIN);
+    }
+
+    lv_obj_align(lbl_title, LV_ALIGN_TOP_MID,    0, 0);
+    lv_obj_align(lbl_body,  LV_ALIGN_CENTER,     0, 0);
+    lv_obj_align(lbl_hint,  LV_ALIGN_BOTTOM_MID, 0, -6);
+    lv_obj_set_style_text_font(lbl_hint, &lv_font_montserrat_14, LV_PART_MAIN);
+
+    /* Người chơi và vật rơi: mỗi cái rộng đúng 1 ô để chữ tự canh giữa ô */
+    lv_obj_set_width(lbl_player, GAME_CELL);
+    lv_obj_set_width(lbl_item,   GAME_CELL);
+    lv_obj_set_style_text_align(lbl_player, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN);
+    lv_obj_set_style_text_align(lbl_item,   LV_TEXT_ALIGN_CENTER, LV_PART_MAIN);
+    lv_label_set_text(lbl_player, "U");
+    lv_label_set_text(lbl_item,   "o");
+
+    lv_rand_set_seed(HAL_GetTick());
+    Theme_Apply();
+    UI_Render();
+}
+
+/* ----- Sự kiện nút nhấn encoder (1 lần / 2 lần / giữ) ------------------------ */
+static void OnButtonEvent(enc_evt_t e)
+{
+    if (e == EB_NONE) return;
+
+    switch (screen)
+    {
+    case SCR_HOME:
+        if (e == EB_SINGLE)
+        {
+            HID_Consumer_Press(VOL_MUTE_BIT);
+            home_status = "Mute";
+            UI_Render();
+        }
+        else if (e == EB_DOUBLE)
+        {
+            Screen_Go(SCR_MENU);
+        }
         break;
-    case MODE_BRIGHTNESS:
-        HID_Consumer_Press(step > 0 ? BRIGHT_INC_BIT : BRIGHT_DEC_BIT);
+
+    case SCR_MENU:
+        if (e == EB_SINGLE)     Screen_Go(menu_items[menu_index].target);
+        else if (e == EB_LONG)  Screen_Go(SCR_HOME);
         break;
-    case MODE_IMAGE:
-        Image_Change(step);
+
+    case SCR_THEME:
+    case SCR_BRIGHT:
+        if (e == EB_SINGLE || e == EB_LONG) Screen_Go(SCR_MENU);
+        break;
+
+    case SCR_GAME:
+        if (e == EB_SINGLE && game_over)  Screen_Go(SCR_GAME);   /* chơi lại */
+        else if (e == EB_LONG)            Screen_Go(SCR_MENU);
         break;
     }
+}
+
+/* ----- Sự kiện xoay encoder -------------------------------------------------- */
+static void OnRotate(int8_t step)
+{
+    switch (screen)
+    {
+    case SCR_HOME:
+        HID_Consumer_Press(step > 0 ? VOL_INC_BIT : VOL_DEC_BIT);
+        home_status = (step > 0) ? "Volume +" : "Volume -";
+        break;
+
+    case SCR_MENU:
+        menu_index = Wrap(menu_index, step, (uint8_t)MENU_COUNT);
+        break;
+
+    case SCR_THEME:
+        theme_index = Wrap(theme_index, step, (uint8_t)THEME_COUNT);
+        Theme_Apply();                       /* đổi màu ngay để xem trước */
+        break;
+
+    case SCR_BRIGHT:
+        HID_Consumer_Press(step > 0 ? BRIGHT_INC_BIT : BRIGHT_DEC_BIT);
+        bright_status = (step > 0) ? "Brighter (+)" : "Darker (-)";
+        break;
+
+    case SCR_GAME:
+        Game_Move(step);
+        break;
+    }
+    UI_Render();
 }
 
 /* USER CODE END 0 */
@@ -429,15 +732,7 @@ int main(void)
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
   lcd_init();
-
-  /* Nền trắng: nếu ảnh nhỏ hơn 240x240 thì phần viền xung quanh sẽ liền màu với ảnh */
-  lv_obj_set_style_bg_color(lv_screen_active(), lv_color_white(), LV_PART_MAIN);
-  lv_obj_set_style_bg_opa(lv_screen_active(), LV_OPA_COVER, LV_PART_MAIN);
-
-  /* Hiển thị ảnh đầu tiên trong image_table */
-  image_obj = lv_image_create(lv_screen_active());
-  lv_image_set_src(image_obj, image_table[image_index]);
-  lv_obj_center(image_obj);
+  UI_Init();                           /* tạo chữ, áp theme, vẽ màn hình HOME */
 
   Buttons_Init();
 
@@ -458,13 +753,15 @@ int main(void)
     lv_timer_handler();                    /* cập nhật màn hình LVGL          */
 
     Buttons_Handle();                      /* 6 nút PC0..PC5                  */
-    Mode_Handle(Encoder_ButtonEvent());    /* nút nhấn encoder: đổi chế độ    */
+    OnButtonEvent(Encoder_ButtonEvent());  /* nút nhấn encoder                */
 
     int8_t step = Encoder_ReadStep();      /* xoay encoder                    */
     if (step != 0)
     {
-      Encoder_Rotate(step);
+      OnRotate(step);
     }
+
+    Game_Update();                         /* vật rơi trong game (nếu đang chơi) */
 
     HAL_Delay(5);
   }
