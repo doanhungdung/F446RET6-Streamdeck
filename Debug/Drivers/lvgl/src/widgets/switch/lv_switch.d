@@ -5,6 +5,7 @@ Drivers/lvgl/src/widgets/switch/lv_switch.o: \
  ../Drivers/lvgl/src/widgets/switch/../../lv_conf_internal.h \
  ../Drivers/lvgl/src/widgets/switch/../../lv_conf_kconfig.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h \
+ ../Drivers/lvgl/src/widgets/switch/../../core/lv_obj_private.h \
  ../Drivers/lvgl/src/widgets/switch/../../core/lv_obj.h \
  ../Drivers/lvgl/src/widgets/switch/../../core/../lv_conf_internal.h \
  ../Drivers/lvgl/src/widgets/switch/../../core/../misc/lv_types.h \
@@ -64,12 +65,6 @@ Drivers/lvgl/src/widgets/switch/lv_switch.o: \
  ../Drivers/lvgl/src/widgets/switch/../../core/../misc/../layouts/lv_layout.h \
  ../Drivers/lvgl/src/widgets/switch/../../core/../misc/../layouts/../lv_conf_internal.h \
  ../Drivers/lvgl/src/widgets/switch/../../core/../misc/../layouts/../misc/lv_types.h \
- ../Drivers/lvgl/src/widgets/switch/../../core/../misc/../layouts/flex/lv_flex.h \
- ../Drivers/lvgl/src/widgets/switch/../../core/../misc/../layouts/flex/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/switch/../../core/../misc/../layouts/flex/../../misc/lv_area.h \
- ../Drivers/lvgl/src/widgets/switch/../../core/../misc/../layouts/grid/lv_grid.h \
- ../Drivers/lvgl/src/widgets/switch/../../core/../misc/../layouts/grid/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/switch/../../core/../misc/../layouts/grid/../../misc/lv_area.h \
  ../Drivers/lvgl/src/widgets/switch/../../core/../misc/lv_style_gen.h \
  ../Drivers/lvgl/src/widgets/switch/../../core/../misc/lv_area.h \
  ../Drivers/lvgl/src/widgets/switch/../../core/../misc/lv_color.h \
@@ -137,20 +132,13 @@ Drivers/lvgl/src/widgets/switch/lv_switch.o: \
  ../Drivers/lvgl/src/widgets/switch/../../core/../indev/../misc/lv_timer.h \
  ../Drivers/lvgl/src/widgets/switch/../../core/../indev/../misc/lv_event.h \
  ../Drivers/lvgl/src/widgets/switch/../../core/lv_group.h \
- ../Drivers/lvgl/src/widgets/switch/../../core/lv_obj_private.h \
- ../Drivers/lvgl/src/widgets/switch/../../core/lv_obj.h \
- ../Drivers/lvgl/src/widgets/switch/../../core/lv_obj_class_private.h \
- ../Drivers/lvgl/src/widgets/switch/../../misc/lv_assert.h \
- ../Drivers/lvgl/src/widgets/switch/../../misc/lv_math.h \
- ../Drivers/lvgl/src/widgets/switch/../../misc/lv_anim_private.h \
- ../Drivers/lvgl/src/widgets/switch/../../misc/lv_anim.h \
- ../Drivers/lvgl/src/widgets/switch/../../indev/lv_indev.h \
- ../Drivers/lvgl/src/widgets/switch/../../display/lv_display.h
+ ../Drivers/lvgl/src/widgets/switch/../../core/lv_obj_class_private.h
 ../Drivers/lvgl/src/widgets/switch/lv_switch_private.h:
 ../Drivers/lvgl/src/widgets/switch/lv_switch.h:
 ../Drivers/lvgl/src/widgets/switch/../../lv_conf_internal.h:
 ../Drivers/lvgl/src/widgets/switch/../../lv_conf_kconfig.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
+../Drivers/lvgl/src/widgets/switch/../../core/lv_obj_private.h:
 ../Drivers/lvgl/src/widgets/switch/../../core/lv_obj.h:
 ../Drivers/lvgl/src/widgets/switch/../../core/../lv_conf_internal.h:
 ../Drivers/lvgl/src/widgets/switch/../../core/../misc/lv_types.h:
@@ -210,12 +198,6 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/widgets/switch/../../core/../misc/../layouts/lv_layout.h:
 ../Drivers/lvgl/src/widgets/switch/../../core/../misc/../layouts/../lv_conf_internal.h:
 ../Drivers/lvgl/src/widgets/switch/../../core/../misc/../layouts/../misc/lv_types.h:
-../Drivers/lvgl/src/widgets/switch/../../core/../misc/../layouts/flex/lv_flex.h:
-../Drivers/lvgl/src/widgets/switch/../../core/../misc/../layouts/flex/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/switch/../../core/../misc/../layouts/flex/../../misc/lv_area.h:
-../Drivers/lvgl/src/widgets/switch/../../core/../misc/../layouts/grid/lv_grid.h:
-../Drivers/lvgl/src/widgets/switch/../../core/../misc/../layouts/grid/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/switch/../../core/../misc/../layouts/grid/../../misc/lv_area.h:
 ../Drivers/lvgl/src/widgets/switch/../../core/../misc/lv_style_gen.h:
 ../Drivers/lvgl/src/widgets/switch/../../core/../misc/lv_area.h:
 ../Drivers/lvgl/src/widgets/switch/../../core/../misc/lv_color.h:
@@ -283,12 +265,4 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/widgets/switch/../../core/../indev/../misc/lv_timer.h:
 ../Drivers/lvgl/src/widgets/switch/../../core/../indev/../misc/lv_event.h:
 ../Drivers/lvgl/src/widgets/switch/../../core/lv_group.h:
-../Drivers/lvgl/src/widgets/switch/../../core/lv_obj_private.h:
-../Drivers/lvgl/src/widgets/switch/../../core/lv_obj.h:
 ../Drivers/lvgl/src/widgets/switch/../../core/lv_obj_class_private.h:
-../Drivers/lvgl/src/widgets/switch/../../misc/lv_assert.h:
-../Drivers/lvgl/src/widgets/switch/../../misc/lv_math.h:
-../Drivers/lvgl/src/widgets/switch/../../misc/lv_anim_private.h:
-../Drivers/lvgl/src/widgets/switch/../../misc/lv_anim.h:
-../Drivers/lvgl/src/widgets/switch/../../indev/lv_indev.h:
-../Drivers/lvgl/src/widgets/switch/../../display/lv_display.h:

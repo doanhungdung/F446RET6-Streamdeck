@@ -68,12 +68,6 @@ Drivers/lvgl/src/libs/gif/lv_gif.o: ../Drivers/lvgl/src/libs/gif/lv_gif.c \
  ../Drivers/lvgl/src/libs/gif/../../core/../misc/../layouts/lv_layout.h \
  ../Drivers/lvgl/src/libs/gif/../../core/../misc/../layouts/../lv_conf_internal.h \
  ../Drivers/lvgl/src/libs/gif/../../core/../misc/../layouts/../misc/lv_types.h \
- ../Drivers/lvgl/src/libs/gif/../../core/../misc/../layouts/flex/lv_flex.h \
- ../Drivers/lvgl/src/libs/gif/../../core/../misc/../layouts/flex/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/libs/gif/../../core/../misc/../layouts/flex/../../misc/lv_area.h \
- ../Drivers/lvgl/src/libs/gif/../../core/../misc/../layouts/grid/lv_grid.h \
- ../Drivers/lvgl/src/libs/gif/../../core/../misc/../layouts/grid/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/libs/gif/../../core/../misc/../layouts/grid/../../misc/lv_area.h \
  ../Drivers/lvgl/src/libs/gif/../../core/../misc/lv_style_gen.h \
  ../Drivers/lvgl/src/libs/gif/lv_gif_private.h \
  ../Drivers/lvgl/src/libs/gif/../../widgets/image/lv_image_private.h \
@@ -228,12 +222,6 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/libs/gif/../../core/../misc/../layouts/lv_layout.h:
 ../Drivers/lvgl/src/libs/gif/../../core/../misc/../layouts/../lv_conf_internal.h:
 ../Drivers/lvgl/src/libs/gif/../../core/../misc/../layouts/../misc/lv_types.h:
-../Drivers/lvgl/src/libs/gif/../../core/../misc/../layouts/flex/lv_flex.h:
-../Drivers/lvgl/src/libs/gif/../../core/../misc/../layouts/flex/../../lv_conf_internal.h:
-../Drivers/lvgl/src/libs/gif/../../core/../misc/../layouts/flex/../../misc/lv_area.h:
-../Drivers/lvgl/src/libs/gif/../../core/../misc/../layouts/grid/lv_grid.h:
-../Drivers/lvgl/src/libs/gif/../../core/../misc/../layouts/grid/../../lv_conf_internal.h:
-../Drivers/lvgl/src/libs/gif/../../core/../misc/../layouts/grid/../../misc/lv_area.h:
 ../Drivers/lvgl/src/libs/gif/../../core/../misc/lv_style_gen.h:
 ../Drivers/lvgl/src/libs/gif/lv_gif_private.h:
 ../Drivers/lvgl/src/libs/gif/../../widgets/image/lv_image_private.h:

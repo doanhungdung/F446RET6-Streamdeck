@@ -64,12 +64,6 @@ Drivers/lvgl/src/widgets/canvas/lv_canvas.o: \
  ../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/../layouts/lv_layout.h \
  ../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/../layouts/../lv_conf_internal.h \
  ../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/../layouts/../misc/lv_types.h \
- ../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/../layouts/flex/lv_flex.h \
- ../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/../layouts/flex/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/../layouts/flex/../../misc/lv_area.h \
- ../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/../layouts/grid/lv_grid.h \
- ../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/../layouts/grid/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/../layouts/grid/../../misc/lv_area.h \
  ../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/lv_style_gen.h \
  ../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/lv_area.h \
  ../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/lv_color.h \
@@ -144,46 +138,8 @@ Drivers/lvgl/src/widgets/canvas/lv_canvas.o: \
  ../Drivers/lvgl/src/widgets/canvas/../image/../../draw/lv_draw.h \
  ../Drivers/lvgl/src/widgets/canvas/lv_canvas.h \
  ../Drivers/lvgl/src/widgets/canvas/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/canvas/../image/lv_image.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/lv_draw_image.h \
  ../Drivers/lvgl/src/widgets/canvas/../../core/lv_obj_class_private.h \
- ../Drivers/lvgl/src/widgets/canvas/../../core/lv_obj_class.h \
- ../Drivers/lvgl/src/widgets/canvas/../../misc/lv_assert.h \
- ../Drivers/lvgl/src/widgets/canvas/../../misc/lv_math.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/lv_draw_private.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/lv_draw.h \
- ../Drivers/lvgl/src/widgets/canvas/../../core/lv_refr.h \
- ../Drivers/lvgl/src/widgets/canvas/../../core/lv_obj.h \
- ../Drivers/lvgl/src/widgets/canvas/../../core/../display/lv_display.h \
- ../Drivers/lvgl/src/widgets/canvas/../../core/../misc/lv_types.h \
- ../Drivers/lvgl/src/widgets/canvas/../../display/lv_display.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/lv_draw_sw.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../lv_draw.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../../misc/lv_area.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../../misc/lv_color.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../../display/lv_display.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../../osal/lv_os.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../lv_draw_vector.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../../misc/lv_array.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../../misc/lv_matrix.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../lv_draw_image.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../lv_draw_triangle.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../lv_draw_rect.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../lv_draw_label.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../lv_draw_image.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../lv_draw_line.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../lv_draw_arc.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/blend/lv_draw_sw_blend.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/blend/../lv_draw_sw_mask.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/blend/../../../misc/lv_area.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/blend/../../../misc/lv_color.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/blend/../../../misc/lv_math.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/blend/../../../misc/lv_types.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/blend/../../../misc/lv_color.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/blend/../../../misc/lv_area.h \
- ../Drivers/lvgl/src/widgets/canvas/../../draw/sw/blend/../../../misc/lv_style.h \
- ../Drivers/lvgl/src/widgets/canvas/../../stdlib/lv_string.h \
- ../Drivers/lvgl/src/widgets/canvas/../../misc/cache/lv_cache.h
+ ../Drivers/lvgl/src/widgets/canvas/../../core/lv_obj_class.h
 ../Drivers/lvgl/src/widgets/canvas/lv_canvas_private.h:
 ../Drivers/lvgl/src/widgets/canvas/../image/lv_image_private.h:
 ../Drivers/lvgl/src/widgets/canvas/../image/../../core/lv_obj_private.h:
@@ -248,12 +204,6 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/../layouts/lv_layout.h:
 ../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/../layouts/../lv_conf_internal.h:
 ../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/../layouts/../misc/lv_types.h:
-../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/../layouts/flex/lv_flex.h:
-../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/../layouts/flex/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/../layouts/flex/../../misc/lv_area.h:
-../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/../layouts/grid/lv_grid.h:
-../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/../layouts/grid/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/../layouts/grid/../../misc/lv_area.h:
 ../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/lv_style_gen.h:
 ../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/lv_area.h:
 ../Drivers/lvgl/src/widgets/canvas/../image/../../core/../misc/lv_color.h:
@@ -328,43 +278,5 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/widgets/canvas/../image/../../draw/lv_draw.h:
 ../Drivers/lvgl/src/widgets/canvas/lv_canvas.h:
 ../Drivers/lvgl/src/widgets/canvas/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/canvas/../image/lv_image.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/lv_draw_image.h:
 ../Drivers/lvgl/src/widgets/canvas/../../core/lv_obj_class_private.h:
 ../Drivers/lvgl/src/widgets/canvas/../../core/lv_obj_class.h:
-../Drivers/lvgl/src/widgets/canvas/../../misc/lv_assert.h:
-../Drivers/lvgl/src/widgets/canvas/../../misc/lv_math.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/lv_draw_private.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/lv_draw.h:
-../Drivers/lvgl/src/widgets/canvas/../../core/lv_refr.h:
-../Drivers/lvgl/src/widgets/canvas/../../core/lv_obj.h:
-../Drivers/lvgl/src/widgets/canvas/../../core/../display/lv_display.h:
-../Drivers/lvgl/src/widgets/canvas/../../core/../misc/lv_types.h:
-../Drivers/lvgl/src/widgets/canvas/../../display/lv_display.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/lv_draw_sw.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../lv_draw.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../../misc/lv_area.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../../misc/lv_color.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../../display/lv_display.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../../osal/lv_os.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../lv_draw_vector.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../../misc/lv_array.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../../misc/lv_matrix.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../lv_draw_image.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../lv_draw_triangle.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../lv_draw_rect.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../lv_draw_label.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../lv_draw_image.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../lv_draw_line.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/../lv_draw_arc.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/blend/lv_draw_sw_blend.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/blend/../lv_draw_sw_mask.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/blend/../../../misc/lv_area.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/blend/../../../misc/lv_color.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/blend/../../../misc/lv_math.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/blend/../../../misc/lv_types.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/blend/../../../misc/lv_color.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/blend/../../../misc/lv_area.h:
-../Drivers/lvgl/src/widgets/canvas/../../draw/sw/blend/../../../misc/lv_style.h:
-../Drivers/lvgl/src/widgets/canvas/../../stdlib/lv_string.h:
-../Drivers/lvgl/src/widgets/canvas/../../misc/cache/lv_cache.h:

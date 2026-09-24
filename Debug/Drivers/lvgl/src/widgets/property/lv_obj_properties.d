@@ -61,12 +61,6 @@ Drivers/lvgl/src/widgets/property/lv_obj_properties.o: \
  ../Drivers/lvgl/src/widgets/property/../../core/../misc/../layouts/lv_layout.h \
  ../Drivers/lvgl/src/widgets/property/../../core/../misc/../layouts/../lv_conf_internal.h \
  ../Drivers/lvgl/src/widgets/property/../../core/../misc/../layouts/../misc/lv_types.h \
- ../Drivers/lvgl/src/widgets/property/../../core/../misc/../layouts/flex/lv_flex.h \
- ../Drivers/lvgl/src/widgets/property/../../core/../misc/../layouts/flex/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/property/../../core/../misc/../layouts/flex/../../misc/lv_area.h \
- ../Drivers/lvgl/src/widgets/property/../../core/../misc/../layouts/grid/lv_grid.h \
- ../Drivers/lvgl/src/widgets/property/../../core/../misc/../layouts/grid/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/property/../../core/../misc/../layouts/grid/../../misc/lv_area.h \
  ../Drivers/lvgl/src/widgets/property/../../core/../misc/lv_style_gen.h \
  ../Drivers/lvgl/src/widgets/property/../../core/../misc/lv_area.h \
  ../Drivers/lvgl/src/widgets/property/../../core/../misc/lv_color.h \
@@ -195,12 +189,6 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/widgets/property/../../core/../misc/../layouts/lv_layout.h:
 ../Drivers/lvgl/src/widgets/property/../../core/../misc/../layouts/../lv_conf_internal.h:
 ../Drivers/lvgl/src/widgets/property/../../core/../misc/../layouts/../misc/lv_types.h:
-../Drivers/lvgl/src/widgets/property/../../core/../misc/../layouts/flex/lv_flex.h:
-../Drivers/lvgl/src/widgets/property/../../core/../misc/../layouts/flex/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/property/../../core/../misc/../layouts/flex/../../misc/lv_area.h:
-../Drivers/lvgl/src/widgets/property/../../core/../misc/../layouts/grid/lv_grid.h:
-../Drivers/lvgl/src/widgets/property/../../core/../misc/../layouts/grid/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/property/../../core/../misc/../layouts/grid/../../misc/lv_area.h:
 ../Drivers/lvgl/src/widgets/property/../../core/../misc/lv_style_gen.h:
 ../Drivers/lvgl/src/widgets/property/../../core/../misc/lv_area.h:
 ../Drivers/lvgl/src/widgets/property/../../core/../misc/lv_color.h:

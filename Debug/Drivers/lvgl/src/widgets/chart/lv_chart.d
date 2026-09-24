@@ -63,12 +63,6 @@ Drivers/lvgl/src/widgets/chart/lv_chart.o: \
  ../Drivers/lvgl/src/widgets/chart/../../core/../misc/../layouts/lv_layout.h \
  ../Drivers/lvgl/src/widgets/chart/../../core/../misc/../layouts/../lv_conf_internal.h \
  ../Drivers/lvgl/src/widgets/chart/../../core/../misc/../layouts/../misc/lv_types.h \
- ../Drivers/lvgl/src/widgets/chart/../../core/../misc/../layouts/flex/lv_flex.h \
- ../Drivers/lvgl/src/widgets/chart/../../core/../misc/../layouts/flex/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/chart/../../core/../misc/../layouts/flex/../../misc/lv_area.h \
- ../Drivers/lvgl/src/widgets/chart/../../core/../misc/../layouts/grid/lv_grid.h \
- ../Drivers/lvgl/src/widgets/chart/../../core/../misc/../layouts/grid/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/chart/../../core/../misc/../layouts/grid/../../misc/lv_area.h \
  ../Drivers/lvgl/src/widgets/chart/../../core/../misc/lv_style_gen.h \
  ../Drivers/lvgl/src/widgets/chart/../../core/../misc/lv_area.h \
  ../Drivers/lvgl/src/widgets/chart/../../core/../misc/lv_color.h \
@@ -143,8 +137,7 @@ Drivers/lvgl/src/widgets/chart/lv_chart.o: \
  ../Drivers/lvgl/src/widgets/chart/../../misc/lv_area.h \
  ../Drivers/lvgl/src/widgets/chart/../../draw/lv_draw_private.h \
  ../Drivers/lvgl/src/widgets/chart/../../draw/lv_draw.h \
- ../Drivers/lvgl/src/widgets/chart/../../core/lv_obj_class_private.h \
- ../Drivers/lvgl/src/widgets/chart/../../misc/lv_assert.h
+ ../Drivers/lvgl/src/widgets/chart/../../core/lv_obj_class_private.h
 ../Drivers/lvgl/src/widgets/chart/lv_chart_private.h:
 ../Drivers/lvgl/src/widgets/chart/../../core/lv_obj_private.h:
 ../Drivers/lvgl/src/widgets/chart/../../core/lv_obj.h:
@@ -208,12 +201,6 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/widgets/chart/../../core/../misc/../layouts/lv_layout.h:
 ../Drivers/lvgl/src/widgets/chart/../../core/../misc/../layouts/../lv_conf_internal.h:
 ../Drivers/lvgl/src/widgets/chart/../../core/../misc/../layouts/../misc/lv_types.h:
-../Drivers/lvgl/src/widgets/chart/../../core/../misc/../layouts/flex/lv_flex.h:
-../Drivers/lvgl/src/widgets/chart/../../core/../misc/../layouts/flex/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/chart/../../core/../misc/../layouts/flex/../../misc/lv_area.h:
-../Drivers/lvgl/src/widgets/chart/../../core/../misc/../layouts/grid/lv_grid.h:
-../Drivers/lvgl/src/widgets/chart/../../core/../misc/../layouts/grid/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/chart/../../core/../misc/../layouts/grid/../../misc/lv_area.h:
 ../Drivers/lvgl/src/widgets/chart/../../core/../misc/lv_style_gen.h:
 ../Drivers/lvgl/src/widgets/chart/../../core/../misc/lv_area.h:
 ../Drivers/lvgl/src/widgets/chart/../../core/../misc/lv_color.h:
@@ -289,4 +276,3 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/widgets/chart/../../draw/lv_draw_private.h:
 ../Drivers/lvgl/src/widgets/chart/../../draw/lv_draw.h:
 ../Drivers/lvgl/src/widgets/chart/../../core/lv_obj_class_private.h:
-../Drivers/lvgl/src/widgets/chart/../../misc/lv_assert.h:

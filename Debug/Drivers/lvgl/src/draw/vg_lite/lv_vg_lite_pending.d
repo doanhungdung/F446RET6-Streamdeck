@@ -85,12 +85,6 @@ Drivers/lvgl/src/draw/vg_lite/lv_vg_lite_pending.o: \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/../layouts/lv_layout.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/../layouts/../lv_conf_internal.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/../layouts/../misc/lv_types.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/../layouts/flex/lv_flex.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/../layouts/flex/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/../layouts/flex/../../misc/lv_area.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/../layouts/grid/lv_grid.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/../layouts/grid/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/../layouts/grid/../../misc/lv_area.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/lv_style_gen.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/lv_area.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/lv_color.h \
@@ -177,36 +171,16 @@ Drivers/lvgl/src/draw/vg_lite/lv_vg_lite_pending.o: \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/animimage/../../misc/lv_types.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/arc/lv_arc.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/arc/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/arc/../../core/lv_obj.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/lv_bar.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/../../core/lv_obj.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/../../misc/lv_anim.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/../label/lv_label.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/../label/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/../label/../../misc/lv_types.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/../label/../../core/lv_obj.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/../label/../../font/lv_font.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/../label/../../font/lv_symbol_def.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/../label/../../misc/lv_text.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/../label/../../draw/lv_draw.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/button/lv_button.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/button/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/button/../../core/lv_obj.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/buttonmatrix/lv_buttonmatrix.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/buttonmatrix/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/buttonmatrix/../../core/lv_obj.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/calendar/lv_calendar.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/calendar/../buttonmatrix/lv_buttonmatrix.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/calendar/lv_calendar_header_arrow.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/calendar/../../core/lv_obj.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/calendar/lv_calendar_header_dropdown.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/calendar/lv_calendar_chinese.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/calendar/lv_calendar.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/canvas/lv_canvas.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/canvas/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/canvas/../image/lv_image.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/canvas/../../draw/lv_draw_image.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/chart/lv_chart.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/chart/../../lv_conf_internal.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/chart/../../core/lv_obj.h \
@@ -215,13 +189,19 @@ Drivers/lvgl/src/draw/vg_lite/lv_vg_lite_pending.o: \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/checkbox/../../core/lv_obj.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/dropdown/lv_dropdown.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/dropdown/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/dropdown/../label/lv_label.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/image/lv_image.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/imagebutton/lv_imagebutton.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/imagebutton/../../core/lv_obj.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/keyboard/lv_keyboard.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/keyboard/../buttonmatrix/lv_buttonmatrix.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/label/lv_label.h \
+ ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/label/../../lv_conf_internal.h \
+ ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/label/../../misc/lv_types.h \
+ ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/label/../../core/lv_obj.h \
+ ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/label/../../font/lv_font.h \
+ ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/label/../../font/lv_symbol_def.h \
+ ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/label/../../misc/lv_text.h \
+ ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/label/../../draw/lv_draw.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/led/lv_led.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/led/../../core/lv_obj.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/line/lv_line.h \
@@ -236,12 +216,8 @@ Drivers/lvgl/src/draw/vg_lite/lv_vg_lite_pending.o: \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/msgbox/../../core/lv_obj.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/roller/lv_roller.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/roller/../../core/lv_obj.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/roller/../label/lv_label.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/scale/lv_scale.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/scale/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/scale/../../core/lv_obj.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/scale/../line/lv_line.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/scale/../image/lv_image.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/slider/lv_slider.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/slider/../bar/lv_bar.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/span/lv_span.h \
@@ -254,7 +230,6 @@ Drivers/lvgl/src/draw/vg_lite/lv_vg_lite_pending.o: \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/spinner/../../lv_conf_internal.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/switch/lv_switch.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/switch/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/switch/../../core/lv_obj.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/table/lv_table.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/table/../label/lv_label.h \
  ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/tabview/lv_tabview.h \
@@ -500,12 +475,6 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/../layouts/lv_layout.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/../layouts/../lv_conf_internal.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/../layouts/../misc/lv_types.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/../layouts/flex/lv_flex.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/../layouts/flex/../../lv_conf_internal.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/../layouts/flex/../../misc/lv_area.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/../layouts/grid/lv_grid.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/../layouts/grid/../../lv_conf_internal.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/../layouts/grid/../../misc/lv_area.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/lv_style_gen.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/lv_area.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/core/../misc/lv_color.h:
@@ -592,36 +561,16 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/animimage/../../misc/lv_types.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/arc/lv_arc.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/arc/../../lv_conf_internal.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/arc/../../core/lv_obj.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/lv_bar.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/../../lv_conf_internal.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/../../core/lv_obj.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/../../misc/lv_anim.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/../label/lv_label.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/../label/../../lv_conf_internal.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/../label/../../misc/lv_types.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/../label/../../core/lv_obj.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/../label/../../font/lv_font.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/../label/../../font/lv_symbol_def.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/../label/../../misc/lv_text.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/bar/../label/../../draw/lv_draw.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/button/lv_button.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/button/../../lv_conf_internal.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/button/../../core/lv_obj.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/buttonmatrix/lv_buttonmatrix.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/buttonmatrix/../../lv_conf_internal.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/buttonmatrix/../../core/lv_obj.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/calendar/lv_calendar.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/calendar/../buttonmatrix/lv_buttonmatrix.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/calendar/lv_calendar_header_arrow.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/calendar/../../core/lv_obj.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/calendar/lv_calendar_header_dropdown.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/calendar/lv_calendar_chinese.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/calendar/lv_calendar.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/canvas/lv_canvas.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/canvas/../../lv_conf_internal.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/canvas/../image/lv_image.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/canvas/../../draw/lv_draw_image.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/chart/lv_chart.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/chart/../../lv_conf_internal.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/chart/../../core/lv_obj.h:
@@ -630,13 +579,19 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/checkbox/../../core/lv_obj.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/dropdown/lv_dropdown.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/dropdown/../../lv_conf_internal.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/dropdown/../label/lv_label.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/image/lv_image.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/imagebutton/lv_imagebutton.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/imagebutton/../../core/lv_obj.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/keyboard/lv_keyboard.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/keyboard/../buttonmatrix/lv_buttonmatrix.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/label/lv_label.h:
+../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/label/../../lv_conf_internal.h:
+../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/label/../../misc/lv_types.h:
+../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/label/../../core/lv_obj.h:
+../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/label/../../font/lv_font.h:
+../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/label/../../font/lv_symbol_def.h:
+../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/label/../../misc/lv_text.h:
+../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/label/../../draw/lv_draw.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/led/lv_led.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/led/../../core/lv_obj.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/line/lv_line.h:
@@ -651,12 +606,8 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/msgbox/../../core/lv_obj.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/roller/lv_roller.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/roller/../../core/lv_obj.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/roller/../label/lv_label.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/scale/lv_scale.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/scale/../../lv_conf_internal.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/scale/../../core/lv_obj.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/scale/../line/lv_line.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/scale/../image/lv_image.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/slider/lv_slider.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/slider/../bar/lv_bar.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/span/lv_span.h:
@@ -669,7 +620,6 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/spinner/../../lv_conf_internal.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/switch/lv_switch.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/switch/../../lv_conf_internal.h:
-../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/switch/../../core/lv_obj.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/table/lv_table.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/table/../label/lv_label.h:
 ../Drivers/lvgl/src/draw/vg_lite/../../../src/widgets/tabview/lv_tabview.h:

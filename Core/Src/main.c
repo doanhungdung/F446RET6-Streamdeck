@@ -64,9 +64,75 @@ static uint8_t Buttons_Scan(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+/* ============================================================================
+ *  1. ẢNH HIỂN THỊ TRÊN MÀN HÌNH
+ *
+ *  Muốn thêm / bớt ảnh chỉ cần sửa 2 chỗ: dòng "extern" và bảng image_table[].
+ *  Tên biến ảnh (hcmute_pixel, hcmute_dore...) phải trùng với tên trong file .c đã convert.
+ * ========================================================================== */
+extern const lv_image_dsc_t hcmute_logo;   /* hcmute_logo.c  */
+extern const lv_image_dsc_t hcmute_pixel;  /* hcmute_pixel.c */
+extern const lv_image_dsc_t hcmute_dore;   /* hcmute_dore.c  */
+
+static const lv_image_dsc_t *const image_table[] = {
+    &hcmute_logo,
+    &hcmute_pixel,
+    &hcmute_dore,
+};
+#define IMAGE_COUNT  (sizeof(image_table) / sizeof(image_table[0]))
+
+static lv_obj_t *image_obj   = NULL;   /* đối tượng LVGL đang hiển thị ảnh          */
+static uint8_t   image_index = 0;      /* ảnh đang hiển thị; sau khi ấn giữ = ảnh đã lưu */
+
+/**
+  * @brief  Chuyển sang ảnh kế tiếp (step > 0) hoặc ảnh trước đó (step < 0).
+  *         Quay vòng: ảnh cuối -> ảnh đầu và ngược lại.
+  */
+static void Image_Change(int8_t step)
+{
+    if (step > 0)
+        image_index = (uint8_t)((image_index + 1U) % IMAGE_COUNT);
+    else
+        image_index = (uint8_t)((image_index + IMAGE_COUNT - 1U) % IMAGE_COUNT);
+
+    lv_image_set_src(image_obj, image_table[image_index]);
+}
+
+/* ============================================================================
+ *  2. USB HID (bàn phím + phím media)
+ * ========================================================================== */
 extern USBD_HandleTypeDef hUsbDeviceFS;
-extern const lv_image_dsc_t hcmute_logo;   /* ảnh logo trong hcmute_logo.c */
-static lv_obj_t *logo_img = NULL;
+
+uint8_t HID_Buffer[8] = {0};   /* giữ lại phòng file khác có extern */
+
+/* Modifier bits của keyboard report */
+#define MOD_CTRL   0x01
+#define MOD_SHIFT  0x02
+#define MOD_ALT    0x04
+#define MOD_GUI    0x08   /* phím Windows */
+
+/* Keycode (USB HID usage) của các phím đang dùng */
+#define KEY_A      0x04
+#define KEY_C      0x06
+#define KEY_D      0x07
+#define KEY_E      0x08
+#define KEY_L      0x0F
+#define KEY_M      0x10
+#define KEY_R      0x15
+#define KEY_S      0x16
+#define KEY_U      0x18
+#define KEY_V      0x19
+#define KEY_ENTER  0x28
+
+/* Bit trong Consumer report (Report ID 2) */
+#define VOL_INC_BIT     (1u << 0)
+#define VOL_DEC_BIT     (1u << 1)
+#define VOL_MUTE_BIT    (1u << 2)
+#define BRIGHT_INC_BIT  (1u << 3)
+#define BRIGHT_DEC_BIT  (1u << 4)
+
+/* Chờ USB rảnh trước khi gửi report tiếp theo */
 static void HID_WaitReady(void)
 {
     USBD_HID_HandleTypeDef *hhid;
@@ -77,13 +143,48 @@ static void HID_WaitReady(void)
     } while (hhid != NULL && hhid->state != USBD_HID_IDLE && HAL_GetTick() < deadline);
 }
 
-uint8_t HID_Buffer[8] = {0};
+/* Gửi 1 tổ hợp phím (nhấn rồi nhả). Bấm 1 phím thường thì truyền mod = 0. */
+static void HID_Keyboard_Combo(uint8_t mod, uint8_t keycode)
+{
+    uint8_t report[9] = {0};
+    report[0] = 0x01;          /* Report ID keyboard */
+    report[1] = mod;
+    report[3] = keycode;
 
-/* Modifier bits của keyboard report */
-#define MOD_CTRL   0x01
-#define MOD_SHIFT  0x02
-#define MOD_ALT    0x04
-#define MOD_GUI    0x08   /* phím Windows */
+    HID_WaitReady();
+    USBD_HID_SendReport(&hUsbDeviceFS, report, sizeof(report));
+
+    HAL_Delay(10);             /* giữ phím đủ lâu để Windows nhận combo */
+    report[1] = 0;
+    report[3] = 0;
+
+    HID_WaitReady();
+    USBD_HID_SendReport(&hUsbDeviceFS, report, sizeof(report));
+}
+
+/* Bấm 1 phím đơn (không có modifier) */
+#define HID_Key(keycode)   HID_Keyboard_Combo(0, (keycode))
+
+/* Gửi 1 phím media (âm lượng / độ sáng): nhấn rồi nhả */
+static void HID_Consumer_Press(uint8_t bitmask)
+{
+    uint8_t report[2];
+    report[0] = 0x02;          /* Report ID consumer */
+    report[1] = bitmask;
+
+    HID_WaitReady();
+    USBD_HID_SendReport(&hUsbDeviceFS, report, sizeof(report));
+
+    HAL_Delay(2);
+    report[1] = 0;
+
+    HID_WaitReady();
+    USBD_HID_SendReport(&hUsbDeviceFS, report, sizeof(report));
+}
+
+/* ============================================================================
+ *  3. 6 NÚT NHẤN PC0..PC5
+ * ========================================================================== */
 
 /**
   * @brief  Cấu hình PC0..PC5 làm ngõ vào (Input, Pull-up) bằng thao tác thanh ghi trực tiếp.
@@ -134,72 +235,78 @@ static uint8_t Buttons_Scan(void)
 
   return 0xFF;
 }
-#define VOL_INC_BIT     (1u << 0)
-#define VOL_DEC_BIT     (1u << 1)
-#define VOL_MUTE_BIT    (1u << 2)
-#define BRIGHT_INC_BIT  (1u << 3)
-#define BRIGHT_DEC_BIT  (1u << 4)
-#define ENCODER_DIV     4
 
-typedef enum { MODE_VOLUME = 0, MODE_BRIGHTNESS, MODE_COLOR } app_mode_t;
-typedef enum { EB_NONE = 0, EB_SINGLE, EB_DOUBLE, EB_LONG } enc_evt_t;
-static app_mode_t app_mode = MODE_VOLUME;
-static int16_t enc_last_count = 0;
+/* Hành động của từng nút */
+static void Button_Action(uint8_t idx)
+{
+    switch (idx)
+    {
+    case 0: HID_Keyboard_Combo(MOD_CTRL, KEY_C); break;               /* PC0: Ctrl+C */
+    case 1: HID_Keyboard_Combo(MOD_CTRL, KEY_V); break;               /* PC1: Ctrl+V */
+    case 2: HID_Keyboard_Combo(MOD_GUI | MOD_SHIFT, KEY_S); break;    /* PC2: Win+Shift+S */
+
+    case 3:                                                           /* PC3: mở cmd */
+        HID_Keyboard_Combo(MOD_GUI, KEY_R);  /* Win+R */
+        HAL_Delay(400);                      /* chờ hộp thoại Run hiện ra */
+        HID_Key(KEY_C);
+        HID_Key(KEY_M);
+        HID_Key(KEY_D);
+        HID_Key(KEY_ENTER);
+        break;
+
+    case 4:                                                           /* PC4: mở app Claude */
+        HID_Keyboard_Combo(MOD_GUI, 0);      /* bấm Win: mở Start */
+        HAL_Delay(500);                      /* chờ Start hiện ra */
+        HID_Key(KEY_C);
+        HID_Key(KEY_L);
+        HID_Key(KEY_A);
+        HID_Key(KEY_U);
+        HID_Key(KEY_D);
+        HID_Key(KEY_E);
+        HAL_Delay(400);                      /* chờ Windows tìm ra kết quả */
+        HID_Key(KEY_ENTER);
+        break;
+
+    case 5: HID_Keyboard_Combo(MOD_CTRL, KEY_D); break;               /* PC5: Ctrl+D */
+    }
+}
+
+/* Chỉ gửi phím 1 lần khi nút VỪA ĐƯỢC NHẤN (trạng thái thay đổi), không lặp khi đang giữ */
+static void Buttons_Handle(void)
+{
+    uint8_t btn = Buttons_Scan();
+
+    if (btn != btn_last)
+    {
+        if (btn != 0xFF)
+        {
+            Button_Action(btn);
+        }
+        btn_last = btn;
+    }
+}
+
+/* ============================================================================
+ *  4. ENCODER (TIM3) + NÚT NHẤN ENCODER (PC8)
+ *
+ *  Nút nhấn encoder:
+ *    - Ấn 1 lần : Volume <-> Brightness
+ *    - Ấn 2 lần : vào chế độ chọn ảnh (xoay encoder để đổi ảnh)
+ *    - Ấn giữ   : (đang ở chế độ chọn ảnh) LƯU ảnh đang hiển thị và thoát về Volume
+ * ========================================================================== */
+#define ENCODER_DIV     4      /* số xung TIM3 ứng với 1 nấc xoay */
 
 #define EB_DEBOUNCE_MS  30u
 #define EB_DBL_MS       350u   /* cửa sổ chờ lần nhấn thứ 2 */
 #define EB_LONG_MS      800u   /* ngưỡng nhấn giữ */
-static uint8_t color_index = 0;
 
-static const lv_color_t color_table[] = {
-    LV_COLOR_MAKE(0x00,0x00,0x00),
-    LV_COLOR_MAKE(0xFF,0x00,0x00),
-    LV_COLOR_MAKE(0x00,0xFF,0x00),
-    LV_COLOR_MAKE(0x00,0x00,0xFF),
-    LV_COLOR_MAKE(0xFF,0xFF,0x00),
-};
-#define COLOR_TABLE_LEN (sizeof(color_table)/sizeof(color_table[0]))
+typedef enum { MODE_VOLUME = 0, MODE_BRIGHTNESS, MODE_IMAGE } app_mode_t;
+typedef enum { EB_NONE = 0, EB_SINGLE, EB_DOUBLE, EB_LONG } enc_evt_t;
 
-static void HID_Keyboard_Combo(uint8_t mod, uint8_t keycode)
-{
-    uint8_t report[9] = {0};
-    report[0] = 0x01;          /* Report ID keyboard */
-    report[1] = mod;
-    report[3] = keycode;
+static app_mode_t app_mode = MODE_VOLUME;
+static int16_t enc_last_count = 0;
 
-    HID_WaitReady();
-    USBD_HID_SendReport(&hUsbDeviceFS, report, sizeof(report));
-
-    HAL_Delay(10);             /* giữ phím đủ lâu để Windows nhận combo */
-    report[1] = 0;
-    report[3] = 0;
-
-    HID_WaitReady();
-    USBD_HID_SendReport(&hUsbDeviceFS, report, sizeof(report));
-}
-
-static void HID_Consumer_Press(uint8_t bitmask)
-{
-    uint8_t report[2];
-    report[0] = 0x02;
-    report[1] = bitmask;
-
-    HID_WaitReady();
-    USBD_HID_SendReport(&hUsbDeviceFS, report, sizeof(report));
-
-    HAL_Delay(2);
-    report[1] = 0;
-
-    HID_WaitReady();                       /* THÊM DÒNG NÀY */
-    USBD_HID_SendReport(&hUsbDeviceFS, report, sizeof(report));
-}
-
-static void Screen_NextColor(void)
-{
-    color_index = (color_index + 1) % COLOR_TABLE_LEN;
-    lv_obj_set_style_bg_color(lv_screen_active(), color_table[color_index], LV_PART_MAIN);
-}
-
+/* Trả về +1 / -1 khi xoay đủ 1 nấc, 0 nếu chưa đủ */
 static int8_t Encoder_ReadStep(void)
 {
     int16_t count = (int16_t)TIM3->CNT;   /* đọc thẳng thanh ghi đếm của TIM3 */
@@ -209,6 +316,7 @@ static int8_t Encoder_ReadStep(void)
     return 0;
 }
 
+/* Máy trạng thái phân biệt ấn 1 lần / ấn 2 lần / ấn giữ của nút PC8 */
 static enc_evt_t Encoder_ButtonEvent(void)
 {
     static uint8_t  st = 0;    /* 0 rảnh, 1 đang nhấn lần 1, 2 chờ lần 2, 3 chờ nhả */
@@ -242,6 +350,7 @@ static enc_evt_t Encoder_ButtonEvent(void)
     return EB_NONE;
 }
 
+/* Xử lý sự kiện nút nhấn encoder -> đổi chế độ */
 static void Mode_Handle(enc_evt_t e)
 {
     switch (e)
@@ -250,52 +359,39 @@ static void Mode_Handle(enc_evt_t e)
         if (app_mode == MODE_VOLUME)          app_mode = MODE_BRIGHTNESS;
         else if (app_mode == MODE_BRIGHTNESS) app_mode = MODE_VOLUME;
         break;
+
     case EB_DOUBLE:
-        if (app_mode == MODE_VOLUME) app_mode = MODE_COLOR;
+        if (app_mode == MODE_VOLUME) app_mode = MODE_IMAGE;
         break;
+
     case EB_LONG:
-        if (app_mode == MODE_COLOR) app_mode = MODE_VOLUME;
+        /* Lưu ảnh: image_index đang trỏ đúng ảnh đang hiển thị nên chỉ cần thoát chế độ,
+         * ảnh sẽ được giữ nguyên trên màn hình. */
+        if (app_mode == MODE_IMAGE) app_mode = MODE_VOLUME;
         break;
-    default: break;
-    }
 
-    /* Chế độ đổi màu: ẩn logo để thấy màu nền; thoát thì hiện lại */
-    if (logo_img) {
-        if (app_mode == MODE_COLOR) lv_obj_add_flag(logo_img, LV_OBJ_FLAG_HIDDEN);
-        else                        lv_obj_remove_flag(logo_img, LV_OBJ_FLAG_HIDDEN);
+    default:
+        break;
     }
 }
 
-static void Button_Action(uint8_t idx)
+/* Xử lý khi xoay encoder: tùy chế độ mà làm việc khác nhau */
+static void Encoder_Rotate(int8_t step)
 {
-    switch (idx)
+    switch (app_mode)
     {
-    case 0: HID_Keyboard_Combo(MOD_CTRL, 0x06); break;              /* PC0: Ctrl+C */
-    case 1: HID_Keyboard_Combo(MOD_CTRL, 0x19); break;              /* PC1: Ctrl+V */
-    case 2: HID_Keyboard_Combo(MOD_GUI | MOD_SHIFT, 0x16); break;   /* PC2: Win+Shift+S */
-    case 3:                                                         /* PC3: mở cmd */
-        HID_Keyboard_Combo(MOD_GUI, 0x15);   /* Win+R */
-        HAL_Delay(400);                      /* chờ hộp thoại Run hiện ra */
-        HID_Keyboard_Combo(0, 0x06);         /* c */
-        HID_Keyboard_Combo(0, 0x10);         /* m */
-        HID_Keyboard_Combo(0, 0x07);         /* d */
-        HID_Keyboard_Combo(0, 0x28);         /* Enter */
+    case MODE_VOLUME:
+        HID_Consumer_Press(step > 0 ? VOL_INC_BIT : VOL_DEC_BIT);
         break;
-    case 4:                                                         /* PC4: mở app Claude */
-        HID_Keyboard_Combo(MOD_GUI, 0);      /* bấm Win: mở Start */
-        HAL_Delay(500);                      /* chờ Start hiện ra */
-        HID_Keyboard_Combo(0, 0x06);         /* c */
-        HID_Keyboard_Combo(0, 0x0F);         /* l */
-        HID_Keyboard_Combo(0, 0x04);         /* a */
-        HID_Keyboard_Combo(0, 0x18);         /* u */
-        HID_Keyboard_Combo(0, 0x07);         /* d */
-        HID_Keyboard_Combo(0, 0x08);         /* e */
-        HAL_Delay(400);                      /* chờ Windows tìm ra kết quả */
-        HID_Keyboard_Combo(0, 0x28);         /* Enter */
+    case MODE_BRIGHTNESS:
+        HID_Consumer_Press(step > 0 ? BRIGHT_INC_BIT : BRIGHT_DEC_BIT);
         break;
-    case 5: HID_Keyboard_Combo(MOD_CTRL, 0x07); break;              /* PC5: Ctrl+D */
+    case MODE_IMAGE:
+        Image_Change(step);
+        break;
     }
 }
+
 /* USER CODE END 0 */
 
 /**
@@ -333,11 +429,18 @@ int main(void)
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
   lcd_init();
-  logo_img = lv_image_create(lv_screen_active());
-  lv_image_set_src(logo_img, &hcmute_logo);
-  lv_obj_center(logo_img);
+
+  /* Nền trắng: nếu ảnh nhỏ hơn 240x240 thì phần viền xung quanh sẽ liền màu với ảnh */
+  lv_obj_set_style_bg_color(lv_screen_active(), lv_color_white(), LV_PART_MAIN);
+  lv_obj_set_style_bg_opa(lv_screen_active(), LV_OPA_COVER, LV_PART_MAIN);
+
+  /* Hiển thị ảnh đầu tiên trong image_table */
+  image_obj = lv_image_create(lv_screen_active());
+  lv_image_set_src(image_obj, image_table[image_index]);
+  lv_obj_center(image_obj);
 
   Buttons_Init();
+
   /* Bật encoder TIM3 bằng thanh ghi */
   TIM3->CCER |= (1UL << 0);            /* CC1E = bit 0: bật kênh 1 (PC6) */
   TIM3->CCER |= (1UL << 4);            /* CC2E = bit 4: bật kênh 2 (PC7) */
@@ -352,33 +455,18 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	      lv_timer_handler();
+    lv_timer_handler();                    /* cập nhật màn hình LVGL          */
 
-	      uint8_t btn = Buttons_Scan();
-	      if (btn != btn_last) {          /* chỉ xử lý khi trạng thái THAY ĐỔI */
-	          if (btn != 0xFF) {          /* và chỉ gửi phím khi vừa CHUYỂN sang có nút được nhấn */
-	              Button_Action(btn);
-	          }
-	          btn_last = btn;
-	      }
-	      Mode_Handle(Encoder_ButtonEvent());
+    Buttons_Handle();                      /* 6 nút PC0..PC5                  */
+    Mode_Handle(Encoder_ButtonEvent());    /* nút nhấn encoder: đổi chế độ    */
 
-	      int8_t step = Encoder_ReadStep();
-	      if (step != 0) {
-	          switch (app_mode) {
-	          case MODE_VOLUME:
-	              HID_Consumer_Press(step > 0 ? VOL_INC_BIT : VOL_DEC_BIT);
-	              break;
-	          case MODE_BRIGHTNESS:
-	              HID_Consumer_Press(step > 0 ? BRIGHT_INC_BIT : BRIGHT_DEC_BIT);
-	              break;
-	          case MODE_COLOR:
-	              Screen_NextColor();
-	              break;
-	          }
-	      }
+    int8_t step = Encoder_ReadStep();      /* xoay encoder                    */
+    if (step != 0)
+    {
+      Encoder_Rotate(step);
+    }
 
-	      HAL_Delay(5);
+    HAL_Delay(5);
   }
   /* USER CODE END 3 */
 }

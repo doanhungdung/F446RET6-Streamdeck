@@ -72,12 +72,6 @@ Core/Src/lcd_port.o: ../Core/Src/lcd_port.c \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/../layouts/lv_layout.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/../layouts/../lv_conf_internal.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/../layouts/../misc/lv_types.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/../layouts/flex/lv_flex.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/../layouts/flex/../../lv_conf_internal.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/../layouts/flex/../../misc/lv_area.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/../layouts/grid/lv_grid.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/../layouts/grid/../../lv_conf_internal.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/../layouts/grid/../../misc/lv_area.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/lv_style_gen.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/lv_text.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/lv_profiler.h \
@@ -211,36 +205,16 @@ Core/Src/lcd_port.o: ../Core/Src/lcd_port.c \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/animimage/../../misc/lv_types.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/arc/lv_arc.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/arc/../../lv_conf_internal.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/arc/../../core/lv_obj.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/lv_bar.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/../../lv_conf_internal.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/../../core/lv_obj.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/../../misc/lv_anim.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/../label/lv_label.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/../label/../../lv_conf_internal.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/../label/../../misc/lv_types.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/../label/../../core/lv_obj.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/../label/../../font/lv_font.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/../label/../../font/lv_symbol_def.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/../label/../../misc/lv_text.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/../label/../../draw/lv_draw.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/button/lv_button.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/button/../../lv_conf_internal.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/button/../../core/lv_obj.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/buttonmatrix/lv_buttonmatrix.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/buttonmatrix/../../lv_conf_internal.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/buttonmatrix/../../core/lv_obj.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/calendar/lv_calendar.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/calendar/../buttonmatrix/lv_buttonmatrix.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/calendar/lv_calendar_header_arrow.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/calendar/../../core/lv_obj.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/calendar/lv_calendar_header_dropdown.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/calendar/lv_calendar_chinese.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/calendar/lv_calendar.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/canvas/lv_canvas.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/canvas/../../lv_conf_internal.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/canvas/../image/lv_image.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/canvas/../../draw/lv_draw_image.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/chart/lv_chart.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/chart/../../lv_conf_internal.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/chart/../../core/lv_obj.h \
@@ -249,13 +223,19 @@ Core/Src/lcd_port.o: ../Core/Src/lcd_port.c \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/checkbox/../../core/lv_obj.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/dropdown/lv_dropdown.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/dropdown/../../lv_conf_internal.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/dropdown/../label/lv_label.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/image/lv_image.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/imagebutton/lv_imagebutton.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/imagebutton/../../core/lv_obj.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/keyboard/lv_keyboard.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/lv_buttonmatrix.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/label/lv_label.h \
+ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/label/../../lv_conf_internal.h \
+ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/label/../../misc/lv_types.h \
+ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/label/../../core/lv_obj.h \
+ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/label/../../font/lv_font.h \
+ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/label/../../font/lv_symbol_def.h \
+ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/label/../../misc/lv_text.h \
+ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/label/../../draw/lv_draw.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/led/lv_led.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/led/../../core/lv_obj.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/line/lv_line.h \
@@ -270,12 +250,8 @@ Core/Src/lcd_port.o: ../Core/Src/lcd_port.c \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/msgbox/../../core/lv_obj.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/roller/lv_roller.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/roller/../../core/lv_obj.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/roller/../label/lv_label.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/scale/lv_scale.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/scale/../../lv_conf_internal.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/scale/../../core/lv_obj.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/scale/../line/lv_line.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/scale/../image/lv_image.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/slider/lv_slider.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/slider/../bar/lv_bar.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/span/lv_span.h \
@@ -288,7 +264,6 @@ Core/Src/lcd_port.o: ../Core/Src/lcd_port.c \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/spinner/../../lv_conf_internal.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/switch/lv_switch.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/switch/../../lv_conf_internal.h \
- E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/switch/../../core/lv_obj.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/table/lv_table.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/table/../label/lv_label.h \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/tabview/lv_tabview.h \
@@ -521,12 +496,6 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/../layouts/lv_layout.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/../layouts/../lv_conf_internal.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/../layouts/../misc/lv_types.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/../layouts/flex/lv_flex.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/../layouts/flex/../../lv_conf_internal.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/../layouts/flex/../../misc/lv_area.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/../layouts/grid/lv_grid.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/../layouts/grid/../../lv_conf_internal.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/../layouts/grid/../../misc/lv_area.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/lv_style_gen.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/lv_text.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/drivers/display/st7789/../lcd/../../../display/../draw/../misc/lv_profiler.h:
@@ -661,36 +630,16 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/animimage/../image
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/animimage/../../misc/lv_types.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/arc/lv_arc.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/arc/../../lv_conf_internal.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/arc/../../core/lv_obj.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/lv_bar.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/../../lv_conf_internal.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/../../core/lv_obj.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/../../misc/lv_anim.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/../label/lv_label.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/../label/../../lv_conf_internal.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/../label/../../misc/lv_types.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/../label/../../core/lv_obj.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/../label/../../font/lv_font.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/../label/../../font/lv_symbol_def.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/../label/../../misc/lv_text.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/bar/../label/../../draw/lv_draw.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/button/lv_button.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/button/../../lv_conf_internal.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/button/../../core/lv_obj.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/buttonmatrix/lv_buttonmatrix.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/buttonmatrix/../../lv_conf_internal.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/buttonmatrix/../../core/lv_obj.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/calendar/lv_calendar.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/calendar/../buttonmatrix/lv_buttonmatrix.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/calendar/lv_calendar_header_arrow.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/calendar/../../core/lv_obj.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/calendar/lv_calendar_header_dropdown.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/calendar/lv_calendar_chinese.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/calendar/lv_calendar.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/canvas/lv_canvas.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/canvas/../../lv_conf_internal.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/canvas/../image/lv_image.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/canvas/../../draw/lv_draw_image.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/chart/lv_chart.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/chart/../../lv_conf_internal.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/chart/../../core/lv_obj.h:
@@ -699,13 +648,19 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/checkbox/../../lv_
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/checkbox/../../core/lv_obj.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/dropdown/lv_dropdown.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/dropdown/../../lv_conf_internal.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/dropdown/../label/lv_label.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/image/lv_image.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/imagebutton/lv_imagebutton.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/imagebutton/../../core/lv_obj.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/keyboard/lv_keyboard.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/lv_buttonmatrix.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/label/lv_label.h:
+E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/label/../../lv_conf_internal.h:
+E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/label/../../misc/lv_types.h:
+E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/label/../../core/lv_obj.h:
+E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/label/../../font/lv_font.h:
+E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/label/../../font/lv_symbol_def.h:
+E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/label/../../misc/lv_text.h:
+E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/label/../../draw/lv_draw.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/led/lv_led.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/led/../../core/lv_obj.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/line/lv_line.h:
@@ -720,12 +675,8 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/msgbox/lv_msgbox.h
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/msgbox/../../core/lv_obj.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/roller/lv_roller.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/roller/../../core/lv_obj.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/roller/../label/lv_label.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/scale/lv_scale.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/scale/../../lv_conf_internal.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/scale/../../core/lv_obj.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/scale/../line/lv_line.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/scale/../image/lv_image.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/slider/lv_slider.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/slider/../bar/lv_bar.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/span/lv_span.h:
@@ -738,7 +689,6 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/spinner/lv_spinner
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/spinner/../../lv_conf_internal.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/switch/lv_switch.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/switch/../../lv_conf_internal.h:
-E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/switch/../../core/lv_obj.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/table/lv_table.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/table/../label/lv_label.h:
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lvgl/src/widgets/tabview/lv_tabview.h:

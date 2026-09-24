@@ -64,12 +64,6 @@ Drivers/lvgl/src/widgets/keyboard/lv_keyboard.o: \
  ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/../layouts/lv_layout.h \
  ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/../layouts/../lv_conf_internal.h \
  ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/../layouts/../misc/lv_types.h \
- ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/../layouts/flex/lv_flex.h \
- ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/../layouts/flex/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/../layouts/flex/../../misc/lv_area.h \
- ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/../layouts/grid/lv_grid.h \
- ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/../layouts/grid/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/../layouts/grid/../../misc/lv_area.h \
  ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/lv_style_gen.h \
  ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/lv_area.h \
  ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/lv_color.h \
@@ -139,22 +133,10 @@ Drivers/lvgl/src/widgets/keyboard/lv_keyboard.o: \
  ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/lv_group.h \
  ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/lv_buttonmatrix.h \
  ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/lv_obj.h \
  ../Drivers/lvgl/src/widgets/keyboard/lv_keyboard.h \
  ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/lv_buttonmatrix.h \
  ../Drivers/lvgl/src/widgets/keyboard/../../core/lv_obj_class_private.h \
- ../Drivers/lvgl/src/widgets/keyboard/../../core/lv_obj_class.h \
- ../Drivers/lvgl/src/widgets/keyboard/../textarea/lv_textarea.h \
- ../Drivers/lvgl/src/widgets/keyboard/../textarea/../label/lv_label.h \
- ../Drivers/lvgl/src/widgets/keyboard/../textarea/../label/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/keyboard/../textarea/../label/../../misc/lv_types.h \
- ../Drivers/lvgl/src/widgets/keyboard/../textarea/../label/../../core/lv_obj.h \
- ../Drivers/lvgl/src/widgets/keyboard/../textarea/../label/../../font/lv_font.h \
- ../Drivers/lvgl/src/widgets/keyboard/../textarea/../label/../../font/lv_symbol_def.h \
- ../Drivers/lvgl/src/widgets/keyboard/../textarea/../label/../../misc/lv_text.h \
- ../Drivers/lvgl/src/widgets/keyboard/../textarea/../label/../../draw/lv_draw.h \
- ../Drivers/lvgl/src/widgets/keyboard/../../misc/lv_assert.h \
- ../Drivers/lvgl/src/widgets/keyboard/../../stdlib/lv_string.h
+ ../Drivers/lvgl/src/widgets/keyboard/../../core/lv_obj_class.h
 ../Drivers/lvgl/src/widgets/keyboard/lv_keyboard_private.h:
 ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/lv_buttonmatrix_private.h:
 ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/lv_obj_private.h:
@@ -219,12 +201,6 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/../layouts/lv_layout.h:
 ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/../layouts/../lv_conf_internal.h:
 ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/../layouts/../misc/lv_types.h:
-../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/../layouts/flex/lv_flex.h:
-../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/../layouts/flex/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/../layouts/flex/../../misc/lv_area.h:
-../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/../layouts/grid/lv_grid.h:
-../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/../layouts/grid/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/../layouts/grid/../../misc/lv_area.h:
 ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/lv_style_gen.h:
 ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/lv_area.h:
 ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/../misc/lv_color.h:
@@ -294,19 +270,7 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/lv_group.h:
 ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/lv_buttonmatrix.h:
 ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/../../core/lv_obj.h:
 ../Drivers/lvgl/src/widgets/keyboard/lv_keyboard.h:
 ../Drivers/lvgl/src/widgets/keyboard/../buttonmatrix/lv_buttonmatrix.h:
 ../Drivers/lvgl/src/widgets/keyboard/../../core/lv_obj_class_private.h:
 ../Drivers/lvgl/src/widgets/keyboard/../../core/lv_obj_class.h:
-../Drivers/lvgl/src/widgets/keyboard/../textarea/lv_textarea.h:
-../Drivers/lvgl/src/widgets/keyboard/../textarea/../label/lv_label.h:
-../Drivers/lvgl/src/widgets/keyboard/../textarea/../label/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/keyboard/../textarea/../label/../../misc/lv_types.h:
-../Drivers/lvgl/src/widgets/keyboard/../textarea/../label/../../core/lv_obj.h:
-../Drivers/lvgl/src/widgets/keyboard/../textarea/../label/../../font/lv_font.h:
-../Drivers/lvgl/src/widgets/keyboard/../textarea/../label/../../font/lv_symbol_def.h:
-../Drivers/lvgl/src/widgets/keyboard/../textarea/../label/../../misc/lv_text.h:
-../Drivers/lvgl/src/widgets/keyboard/../textarea/../label/../../draw/lv_draw.h:
-../Drivers/lvgl/src/widgets/keyboard/../../misc/lv_assert.h:
-../Drivers/lvgl/src/widgets/keyboard/../../stdlib/lv_string.h:

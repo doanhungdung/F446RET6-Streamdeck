@@ -63,12 +63,6 @@ Drivers/lvgl/src/widgets/calendar/lv_calendar_chinese.o: \
  ../Drivers/lvgl/src/widgets/calendar/../../core/../misc/../layouts/lv_layout.h \
  ../Drivers/lvgl/src/widgets/calendar/../../core/../misc/../layouts/../lv_conf_internal.h \
  ../Drivers/lvgl/src/widgets/calendar/../../core/../misc/../layouts/../misc/lv_types.h \
- ../Drivers/lvgl/src/widgets/calendar/../../core/../misc/../layouts/flex/lv_flex.h \
- ../Drivers/lvgl/src/widgets/calendar/../../core/../misc/../layouts/flex/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/calendar/../../core/../misc/../layouts/flex/../../misc/lv_area.h \
- ../Drivers/lvgl/src/widgets/calendar/../../core/../misc/../layouts/grid/lv_grid.h \
- ../Drivers/lvgl/src/widgets/calendar/../../core/../misc/../layouts/grid/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/calendar/../../core/../misc/../layouts/grid/../../misc/lv_area.h \
  ../Drivers/lvgl/src/widgets/calendar/../../core/../misc/lv_style_gen.h \
  ../Drivers/lvgl/src/widgets/calendar/../../core/../misc/lv_area.h \
  ../Drivers/lvgl/src/widgets/calendar/../../core/../misc/lv_color.h \
@@ -138,12 +132,7 @@ Drivers/lvgl/src/widgets/calendar/lv_calendar_chinese.o: \
  ../Drivers/lvgl/src/widgets/calendar/../../core/lv_group.h \
  ../Drivers/lvgl/src/widgets/calendar/lv_calendar.h \
  ../Drivers/lvgl/src/widgets/calendar/../buttonmatrix/lv_buttonmatrix.h \
- ../Drivers/lvgl/src/widgets/calendar/../buttonmatrix/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/calendar/../buttonmatrix/../../core/lv_obj.h \
- ../Drivers/lvgl/src/widgets/calendar/lv_calendar_header_arrow.h \
- ../Drivers/lvgl/src/widgets/calendar/../../core/lv_obj.h \
- ../Drivers/lvgl/src/widgets/calendar/lv_calendar_header_dropdown.h \
- ../Drivers/lvgl/src/widgets/calendar/lv_calendar_chinese.h
+ ../Drivers/lvgl/src/widgets/calendar/../buttonmatrix/../../lv_conf_internal.h
 ../Drivers/lvgl/src/widgets/calendar/lv_calendar_private.h:
 ../Drivers/lvgl/src/widgets/calendar/../../core/lv_obj_private.h:
 ../Drivers/lvgl/src/widgets/calendar/../../core/lv_obj.h:
@@ -207,12 +196,6 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/widgets/calendar/../../core/../misc/../layouts/lv_layout.h:
 ../Drivers/lvgl/src/widgets/calendar/../../core/../misc/../layouts/../lv_conf_internal.h:
 ../Drivers/lvgl/src/widgets/calendar/../../core/../misc/../layouts/../misc/lv_types.h:
-../Drivers/lvgl/src/widgets/calendar/../../core/../misc/../layouts/flex/lv_flex.h:
-../Drivers/lvgl/src/widgets/calendar/../../core/../misc/../layouts/flex/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/calendar/../../core/../misc/../layouts/flex/../../misc/lv_area.h:
-../Drivers/lvgl/src/widgets/calendar/../../core/../misc/../layouts/grid/lv_grid.h:
-../Drivers/lvgl/src/widgets/calendar/../../core/../misc/../layouts/grid/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/calendar/../../core/../misc/../layouts/grid/../../misc/lv_area.h:
 ../Drivers/lvgl/src/widgets/calendar/../../core/../misc/lv_style_gen.h:
 ../Drivers/lvgl/src/widgets/calendar/../../core/../misc/lv_area.h:
 ../Drivers/lvgl/src/widgets/calendar/../../core/../misc/lv_color.h:
@@ -283,8 +266,3 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/widgets/calendar/lv_calendar.h:
 ../Drivers/lvgl/src/widgets/calendar/../buttonmatrix/lv_buttonmatrix.h:
 ../Drivers/lvgl/src/widgets/calendar/../buttonmatrix/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/calendar/../buttonmatrix/../../core/lv_obj.h:
-../Drivers/lvgl/src/widgets/calendar/lv_calendar_header_arrow.h:
-../Drivers/lvgl/src/widgets/calendar/../../core/lv_obj.h:
-../Drivers/lvgl/src/widgets/calendar/lv_calendar_header_dropdown.h:
-../Drivers/lvgl/src/widgets/calendar/lv_calendar_chinese.h:

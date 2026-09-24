@@ -11,10 +11,6 @@ Drivers/lvgl/src/layouts/flex/lv_flex.o: \
  ../Drivers/lvgl/src/layouts/flex/../lv_layout.h \
  ../Drivers/lvgl/src/layouts/flex/../../lv_conf_internal.h \
  ../Drivers/lvgl/src/layouts/flex/../../misc/lv_types.h \
- ../Drivers/lvgl/src/layouts/flex/../flex/lv_flex.h \
- ../Drivers/lvgl/src/layouts/flex/../grid/lv_grid.h \
- ../Drivers/lvgl/src/layouts/flex/../grid/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/layouts/flex/../grid/../../misc/lv_area.h \
  ../Drivers/lvgl/src/layouts/flex/../../core/lv_obj_private.h \
  ../Drivers/lvgl/src/layouts/flex/../../core/lv_obj.h \
  ../Drivers/lvgl/src/layouts/flex/../../core/../lv_conf_internal.h \
@@ -139,66 +135,7 @@ Drivers/lvgl/src/layouts/flex/lv_flex.o: \
  ../Drivers/lvgl/src/layouts/flex/../../core/../indev/../misc/lv_area.h \
  ../Drivers/lvgl/src/layouts/flex/../../core/../indev/../misc/lv_timer.h \
  ../Drivers/lvgl/src/layouts/flex/../../core/../indev/../misc/lv_event.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/lv_group.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/lv_global.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/lv_draw.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/lv_draw_sw.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../lv_draw.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../../misc/lv_area.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../../display/lv_display.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../../osal/lv_os.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../lv_draw_vector.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../../misc/lv_array.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../../misc/lv_matrix.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../lv_draw_image.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../lv_draw_triangle.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../lv_draw_rect.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../lv_draw_label.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../lv_draw_image.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../lv_draw_line.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../lv_draw_arc.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/blend/lv_draw_sw_blend.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/blend/../lv_draw_sw_mask.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/blend/../../../misc/lv_area.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/blend/../../../misc/lv_color.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/blend/../../../misc/lv_math.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/blend/../../../misc/lv_types.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/blend/../../../misc/lv_color.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/blend/../../../misc/lv_area.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/blend/../../../misc/lv_style.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../misc/lv_color_op.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../misc/lv_ll.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../misc/lv_log.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../misc/lv_timer.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../osal/lv_os.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../others/sysmon/lv_sysmon.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../others/sysmon/../../misc/lv_timer.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../others/sysmon/../../others/observer/lv_observer.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../others/sysmon/../../others/observer/../../core/lv_obj.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../stdlib/builtin/lv_tlsf.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../stdlib/builtin/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../stdlib/builtin/../../osal/lv_os.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../stdlib/builtin/../../misc/lv_ll.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../stdlib/builtin/../../misc/lv_types.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../tick/lv_tick.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../layouts/lv_layout.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../misc/lv_timer_private.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../misc/lv_anim_private.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../tick/lv_tick_private.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../tick/lv_tick.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/lv_draw_buf_private.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/lv_draw_private.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/lv_draw_sw_private.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/lv_draw_sw.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../lv_draw_private.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/lv_draw_sw_mask_private.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/lv_draw_sw_mask.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../stdlib/builtin/lv_tlsf_private.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../stdlib/builtin/lv_tlsf.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../others/sysmon/lv_sysmon_private.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../others/sysmon/lv_sysmon.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../layouts/lv_layout_private.h \
- ../Drivers/lvgl/src/layouts/flex/../../core/../layouts/lv_layout.h
+ ../Drivers/lvgl/src/layouts/flex/../../core/lv_group.h
 ../Drivers/lvgl/src/layouts/flex/lv_flex.h:
 ../Drivers/lvgl/src/layouts/flex/../../lv_conf_internal.h:
 ../Drivers/lvgl/src/layouts/flex/../../lv_conf_kconfig.h:
@@ -210,10 +147,6 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/layouts/flex/../lv_layout.h:
 ../Drivers/lvgl/src/layouts/flex/../../lv_conf_internal.h:
 ../Drivers/lvgl/src/layouts/flex/../../misc/lv_types.h:
-../Drivers/lvgl/src/layouts/flex/../flex/lv_flex.h:
-../Drivers/lvgl/src/layouts/flex/../grid/lv_grid.h:
-../Drivers/lvgl/src/layouts/flex/../grid/../../lv_conf_internal.h:
-../Drivers/lvgl/src/layouts/flex/../grid/../../misc/lv_area.h:
 ../Drivers/lvgl/src/layouts/flex/../../core/lv_obj_private.h:
 ../Drivers/lvgl/src/layouts/flex/../../core/lv_obj.h:
 ../Drivers/lvgl/src/layouts/flex/../../core/../lv_conf_internal.h:
@@ -339,62 +272,3 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/layouts/flex/../../core/../indev/../misc/lv_timer.h:
 ../Drivers/lvgl/src/layouts/flex/../../core/../indev/../misc/lv_event.h:
 ../Drivers/lvgl/src/layouts/flex/../../core/lv_group.h:
-../Drivers/lvgl/src/layouts/flex/../../core/lv_global.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/lv_draw.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/lv_draw_sw.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../lv_draw.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../../misc/lv_area.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../../display/lv_display.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../../osal/lv_os.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../lv_draw_vector.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../../misc/lv_array.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../../misc/lv_matrix.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../lv_draw_image.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../lv_draw_triangle.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../lv_draw_rect.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../lv_draw_label.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../lv_draw_image.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../lv_draw_line.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../lv_draw_arc.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/blend/lv_draw_sw_blend.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/blend/../lv_draw_sw_mask.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/blend/../../../misc/lv_area.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/blend/../../../misc/lv_color.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/blend/../../../misc/lv_math.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/blend/../../../misc/lv_types.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/blend/../../../misc/lv_color.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/blend/../../../misc/lv_area.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/blend/../../../misc/lv_style.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../misc/lv_color_op.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../misc/lv_ll.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../misc/lv_log.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../misc/lv_timer.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../osal/lv_os.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../others/sysmon/lv_sysmon.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../others/sysmon/../../misc/lv_timer.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../others/sysmon/../../others/observer/lv_observer.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../others/sysmon/../../others/observer/../../core/lv_obj.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../stdlib/builtin/lv_tlsf.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../stdlib/builtin/../../lv_conf_internal.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../stdlib/builtin/../../osal/lv_os.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../stdlib/builtin/../../misc/lv_ll.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../stdlib/builtin/../../misc/lv_types.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../tick/lv_tick.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../layouts/lv_layout.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../misc/lv_timer_private.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../misc/lv_anim_private.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../tick/lv_tick_private.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../tick/lv_tick.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/lv_draw_buf_private.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/lv_draw_private.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/lv_draw_sw_private.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/lv_draw_sw.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/../lv_draw_private.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/lv_draw_sw_mask_private.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../draw/sw/lv_draw_sw_mask.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../stdlib/builtin/lv_tlsf_private.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../stdlib/builtin/lv_tlsf.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../others/sysmon/lv_sysmon_private.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../others/sysmon/lv_sysmon.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../layouts/lv_layout_private.h:
-../Drivers/lvgl/src/layouts/flex/../../core/../layouts/lv_layout.h:

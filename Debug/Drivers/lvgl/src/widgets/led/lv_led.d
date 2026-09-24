@@ -63,12 +63,6 @@ Drivers/lvgl/src/widgets/led/lv_led.o: \
  ../Drivers/lvgl/src/widgets/led/../../core/../misc/../layouts/lv_layout.h \
  ../Drivers/lvgl/src/widgets/led/../../core/../misc/../layouts/../lv_conf_internal.h \
  ../Drivers/lvgl/src/widgets/led/../../core/../misc/../layouts/../misc/lv_types.h \
- ../Drivers/lvgl/src/widgets/led/../../core/../misc/../layouts/flex/lv_flex.h \
- ../Drivers/lvgl/src/widgets/led/../../core/../misc/../layouts/flex/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/led/../../core/../misc/../layouts/flex/../../misc/lv_area.h \
- ../Drivers/lvgl/src/widgets/led/../../core/../misc/../layouts/grid/lv_grid.h \
- ../Drivers/lvgl/src/widgets/led/../../core/../misc/../layouts/grid/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/led/../../core/../misc/../layouts/grid/../../misc/lv_area.h \
  ../Drivers/lvgl/src/widgets/led/../../core/../misc/lv_style_gen.h \
  ../Drivers/lvgl/src/widgets/led/../../core/../misc/lv_area.h \
  ../Drivers/lvgl/src/widgets/led/../../core/../misc/lv_color.h \
@@ -138,18 +132,7 @@ Drivers/lvgl/src/widgets/led/lv_led.o: \
  ../Drivers/lvgl/src/widgets/led/../../core/lv_group.h \
  ../Drivers/lvgl/src/widgets/led/../../core/lv_obj_private.h \
  ../Drivers/lvgl/src/widgets/led/../../core/lv_obj.h \
- ../Drivers/lvgl/src/widgets/led/../../core/lv_obj_class_private.h \
- ../Drivers/lvgl/src/widgets/led/../../misc/lv_assert.h \
- ../Drivers/lvgl/src/widgets/led/../../themes/lv_theme.h \
- ../Drivers/lvgl/src/widgets/led/../../themes/../core/lv_obj.h \
- ../Drivers/lvgl/src/widgets/led/../../themes/default/lv_theme_default.h \
- ../Drivers/lvgl/src/widgets/led/../../themes/default/../lv_theme.h \
- ../Drivers/lvgl/src/widgets/led/../../themes/mono/lv_theme_mono.h \
- ../Drivers/lvgl/src/widgets/led/../../themes/mono/../lv_theme.h \
- ../Drivers/lvgl/src/widgets/led/../../themes/simple/lv_theme_simple.h \
- ../Drivers/lvgl/src/widgets/led/../../themes/simple/../lv_theme.h \
- ../Drivers/lvgl/src/widgets/led/../../themes/simple/../../display/lv_display.h \
- ../Drivers/lvgl/src/widgets/led/../../misc/lv_color.h
+ ../Drivers/lvgl/src/widgets/led/../../core/lv_obj_class_private.h
 ../Drivers/lvgl/src/widgets/led/lv_led_private.h:
 ../Drivers/lvgl/src/widgets/led/lv_led.h:
 ../Drivers/lvgl/src/widgets/led/../../core/lv_obj.h:
@@ -213,12 +196,6 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/widgets/led/../../core/../misc/../layouts/lv_layout.h:
 ../Drivers/lvgl/src/widgets/led/../../core/../misc/../layouts/../lv_conf_internal.h:
 ../Drivers/lvgl/src/widgets/led/../../core/../misc/../layouts/../misc/lv_types.h:
-../Drivers/lvgl/src/widgets/led/../../core/../misc/../layouts/flex/lv_flex.h:
-../Drivers/lvgl/src/widgets/led/../../core/../misc/../layouts/flex/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/led/../../core/../misc/../layouts/flex/../../misc/lv_area.h:
-../Drivers/lvgl/src/widgets/led/../../core/../misc/../layouts/grid/lv_grid.h:
-../Drivers/lvgl/src/widgets/led/../../core/../misc/../layouts/grid/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/led/../../core/../misc/../layouts/grid/../../misc/lv_area.h:
 ../Drivers/lvgl/src/widgets/led/../../core/../misc/lv_style_gen.h:
 ../Drivers/lvgl/src/widgets/led/../../core/../misc/lv_area.h:
 ../Drivers/lvgl/src/widgets/led/../../core/../misc/lv_color.h:
@@ -289,14 +266,3 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/widgets/led/../../core/lv_obj_private.h:
 ../Drivers/lvgl/src/widgets/led/../../core/lv_obj.h:
 ../Drivers/lvgl/src/widgets/led/../../core/lv_obj_class_private.h:
-../Drivers/lvgl/src/widgets/led/../../misc/lv_assert.h:
-../Drivers/lvgl/src/widgets/led/../../themes/lv_theme.h:
-../Drivers/lvgl/src/widgets/led/../../themes/../core/lv_obj.h:
-../Drivers/lvgl/src/widgets/led/../../themes/default/lv_theme_default.h:
-../Drivers/lvgl/src/widgets/led/../../themes/default/../lv_theme.h:
-../Drivers/lvgl/src/widgets/led/../../themes/mono/lv_theme_mono.h:
-../Drivers/lvgl/src/widgets/led/../../themes/mono/../lv_theme.h:
-../Drivers/lvgl/src/widgets/led/../../themes/simple/lv_theme_simple.h:
-../Drivers/lvgl/src/widgets/led/../../themes/simple/../lv_theme.h:
-../Drivers/lvgl/src/widgets/led/../../themes/simple/../../display/lv_display.h:
-../Drivers/lvgl/src/widgets/led/../../misc/lv_color.h:

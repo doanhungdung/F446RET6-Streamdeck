@@ -56,12 +56,6 @@ Drivers/lvgl/src/draw/lv_draw_mask.o: \
  ../Drivers/lvgl/src/draw/../misc/../layouts/lv_layout.h \
  ../Drivers/lvgl/src/draw/../misc/../layouts/../lv_conf_internal.h \
  ../Drivers/lvgl/src/draw/../misc/../layouts/../misc/lv_types.h \
- ../Drivers/lvgl/src/draw/../misc/../layouts/flex/lv_flex.h \
- ../Drivers/lvgl/src/draw/../misc/../layouts/flex/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/draw/../misc/../layouts/flex/../../misc/lv_area.h \
- ../Drivers/lvgl/src/draw/../misc/../layouts/grid/lv_grid.h \
- ../Drivers/lvgl/src/draw/../misc/../layouts/grid/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/draw/../misc/../layouts/grid/../../misc/lv_area.h \
  ../Drivers/lvgl/src/draw/../misc/lv_style_gen.h \
  ../Drivers/lvgl/src/draw/lv_draw.h \
  ../Drivers/lvgl/src/draw/../lv_conf_internal.h \
@@ -190,12 +184,6 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/draw/../misc/../layouts/lv_layout.h:
 ../Drivers/lvgl/src/draw/../misc/../layouts/../lv_conf_internal.h:
 ../Drivers/lvgl/src/draw/../misc/../layouts/../misc/lv_types.h:
-../Drivers/lvgl/src/draw/../misc/../layouts/flex/lv_flex.h:
-../Drivers/lvgl/src/draw/../misc/../layouts/flex/../../lv_conf_internal.h:
-../Drivers/lvgl/src/draw/../misc/../layouts/flex/../../misc/lv_area.h:
-../Drivers/lvgl/src/draw/../misc/../layouts/grid/lv_grid.h:
-../Drivers/lvgl/src/draw/../misc/../layouts/grid/../../lv_conf_internal.h:
-../Drivers/lvgl/src/draw/../misc/../layouts/grid/../../misc/lv_area.h:
 ../Drivers/lvgl/src/draw/../misc/lv_style_gen.h:
 ../Drivers/lvgl/src/draw/lv_draw.h:
 ../Drivers/lvgl/src/draw/../lv_conf_internal.h:

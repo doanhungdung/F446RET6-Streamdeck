@@ -10,12 +10,6 @@ Drivers/lvgl/src/core/lv_obj_pos.o: ../Drivers/lvgl/src/core/lv_obj_pos.c \
  ../Drivers/lvgl/src/core/../layouts/lv_layout.h \
  ../Drivers/lvgl/src/core/../layouts/../lv_conf_internal.h \
  ../Drivers/lvgl/src/core/../layouts/../misc/lv_types.h \
- ../Drivers/lvgl/src/core/../layouts/flex/lv_flex.h \
- ../Drivers/lvgl/src/core/../layouts/flex/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/core/../layouts/flex/../../misc/lv_area.h \
- ../Drivers/lvgl/src/core/../layouts/grid/lv_grid.h \
- ../Drivers/lvgl/src/core/../layouts/grid/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/core/../layouts/grid/../../misc/lv_area.h \
  ../Drivers/lvgl/src/core/lv_obj_event_private.h \
  ../Drivers/lvgl/src/core/lv_obj_event.h \
  ../Drivers/lvgl/src/core/../misc/lv_types.h \
@@ -222,12 +216,6 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/core/../layouts/lv_layout.h:
 ../Drivers/lvgl/src/core/../layouts/../lv_conf_internal.h:
 ../Drivers/lvgl/src/core/../layouts/../misc/lv_types.h:
-../Drivers/lvgl/src/core/../layouts/flex/lv_flex.h:
-../Drivers/lvgl/src/core/../layouts/flex/../../lv_conf_internal.h:
-../Drivers/lvgl/src/core/../layouts/flex/../../misc/lv_area.h:
-../Drivers/lvgl/src/core/../layouts/grid/lv_grid.h:
-../Drivers/lvgl/src/core/../layouts/grid/../../lv_conf_internal.h:
-../Drivers/lvgl/src/core/../layouts/grid/../../misc/lv_area.h:
 ../Drivers/lvgl/src/core/lv_obj_event_private.h:
 ../Drivers/lvgl/src/core/lv_obj_event.h:
 ../Drivers/lvgl/src/core/../misc/lv_types.h:

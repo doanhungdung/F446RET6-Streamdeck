@@ -63,12 +63,6 @@ Drivers/lvgl/src/widgets/arc/lv_arc.o: \
  ../Drivers/lvgl/src/widgets/arc/../../core/../misc/../layouts/lv_layout.h \
  ../Drivers/lvgl/src/widgets/arc/../../core/../misc/../layouts/../lv_conf_internal.h \
  ../Drivers/lvgl/src/widgets/arc/../../core/../misc/../layouts/../misc/lv_types.h \
- ../Drivers/lvgl/src/widgets/arc/../../core/../misc/../layouts/flex/lv_flex.h \
- ../Drivers/lvgl/src/widgets/arc/../../core/../misc/../layouts/flex/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/arc/../../core/../misc/../layouts/flex/../../misc/lv_area.h \
- ../Drivers/lvgl/src/widgets/arc/../../core/../misc/../layouts/grid/lv_grid.h \
- ../Drivers/lvgl/src/widgets/arc/../../core/../misc/../layouts/grid/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/arc/../../core/../misc/../layouts/grid/../../misc/lv_area.h \
  ../Drivers/lvgl/src/widgets/arc/../../core/../misc/lv_style_gen.h \
  ../Drivers/lvgl/src/widgets/arc/../../core/../misc/lv_area.h \
  ../Drivers/lvgl/src/widgets/arc/../../core/../misc/lv_color.h \
@@ -138,16 +132,10 @@ Drivers/lvgl/src/widgets/arc/lv_arc.o: \
  ../Drivers/lvgl/src/widgets/arc/../../core/lv_group.h \
  ../Drivers/lvgl/src/widgets/arc/lv_arc.h \
  ../Drivers/lvgl/src/widgets/arc/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/arc/../../core/lv_obj.h \
  ../Drivers/lvgl/src/widgets/arc/../../misc/lv_area_private.h \
  ../Drivers/lvgl/src/widgets/arc/../../misc/lv_area.h \
  ../Drivers/lvgl/src/widgets/arc/../../core/lv_obj_event_private.h \
- ../Drivers/lvgl/src/widgets/arc/../../core/lv_obj_class_private.h \
- ../Drivers/lvgl/src/widgets/arc/../../core/lv_group.h \
- ../Drivers/lvgl/src/widgets/arc/../../indev/lv_indev.h \
- ../Drivers/lvgl/src/widgets/arc/../../misc/lv_assert.h \
- ../Drivers/lvgl/src/widgets/arc/../../misc/lv_math.h \
- ../Drivers/lvgl/src/widgets/arc/../../draw/lv_draw_arc.h
+ ../Drivers/lvgl/src/widgets/arc/../../core/lv_obj_class_private.h
 ../Drivers/lvgl/src/widgets/arc/lv_arc_private.h:
 ../Drivers/lvgl/src/widgets/arc/../../core/lv_obj_private.h:
 ../Drivers/lvgl/src/widgets/arc/../../core/lv_obj.h:
@@ -211,12 +199,6 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/widgets/arc/../../core/../misc/../layouts/lv_layout.h:
 ../Drivers/lvgl/src/widgets/arc/../../core/../misc/../layouts/../lv_conf_internal.h:
 ../Drivers/lvgl/src/widgets/arc/../../core/../misc/../layouts/../misc/lv_types.h:
-../Drivers/lvgl/src/widgets/arc/../../core/../misc/../layouts/flex/lv_flex.h:
-../Drivers/lvgl/src/widgets/arc/../../core/../misc/../layouts/flex/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/arc/../../core/../misc/../layouts/flex/../../misc/lv_area.h:
-../Drivers/lvgl/src/widgets/arc/../../core/../misc/../layouts/grid/lv_grid.h:
-../Drivers/lvgl/src/widgets/arc/../../core/../misc/../layouts/grid/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/arc/../../core/../misc/../layouts/grid/../../misc/lv_area.h:
 ../Drivers/lvgl/src/widgets/arc/../../core/../misc/lv_style_gen.h:
 ../Drivers/lvgl/src/widgets/arc/../../core/../misc/lv_area.h:
 ../Drivers/lvgl/src/widgets/arc/../../core/../misc/lv_color.h:
@@ -286,13 +268,7 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/widgets/arc/../../core/lv_group.h:
 ../Drivers/lvgl/src/widgets/arc/lv_arc.h:
 ../Drivers/lvgl/src/widgets/arc/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/arc/../../core/lv_obj.h:
 ../Drivers/lvgl/src/widgets/arc/../../misc/lv_area_private.h:
 ../Drivers/lvgl/src/widgets/arc/../../misc/lv_area.h:
 ../Drivers/lvgl/src/widgets/arc/../../core/lv_obj_event_private.h:
 ../Drivers/lvgl/src/widgets/arc/../../core/lv_obj_class_private.h:
-../Drivers/lvgl/src/widgets/arc/../../core/lv_group.h:
-../Drivers/lvgl/src/widgets/arc/../../indev/lv_indev.h:
-../Drivers/lvgl/src/widgets/arc/../../misc/lv_assert.h:
-../Drivers/lvgl/src/widgets/arc/../../misc/lv_math.h:
-../Drivers/lvgl/src/widgets/arc/../../draw/lv_draw_arc.h:

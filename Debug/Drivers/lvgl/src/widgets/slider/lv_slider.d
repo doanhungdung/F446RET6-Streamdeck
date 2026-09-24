@@ -64,12 +64,6 @@ Drivers/lvgl/src/widgets/slider/lv_slider.o: \
  ../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/../layouts/lv_layout.h \
  ../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/../layouts/../lv_conf_internal.h \
  ../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/../layouts/../misc/lv_types.h \
- ../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/../layouts/flex/lv_flex.h \
- ../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/../layouts/flex/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/../layouts/flex/../../misc/lv_area.h \
- ../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/../layouts/grid/lv_grid.h \
- ../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/../layouts/grid/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/../layouts/grid/../../misc/lv_area.h \
  ../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/lv_style_gen.h \
  ../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/lv_area.h \
  ../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/lv_color.h \
@@ -139,16 +133,6 @@ Drivers/lvgl/src/widgets/slider/lv_slider.o: \
  ../Drivers/lvgl/src/widgets/slider/../bar/../../core/lv_group.h \
  ../Drivers/lvgl/src/widgets/slider/../bar/lv_bar.h \
  ../Drivers/lvgl/src/widgets/slider/../bar/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/slider/../bar/../../core/lv_obj.h \
- ../Drivers/lvgl/src/widgets/slider/../bar/../../misc/lv_anim.h \
- ../Drivers/lvgl/src/widgets/slider/../bar/../label/lv_label.h \
- ../Drivers/lvgl/src/widgets/slider/../bar/../label/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/slider/../bar/../label/../../misc/lv_types.h \
- ../Drivers/lvgl/src/widgets/slider/../bar/../label/../../core/lv_obj.h \
- ../Drivers/lvgl/src/widgets/slider/../bar/../label/../../font/lv_font.h \
- ../Drivers/lvgl/src/widgets/slider/../bar/../label/../../font/lv_symbol_def.h \
- ../Drivers/lvgl/src/widgets/slider/../bar/../label/../../misc/lv_text.h \
- ../Drivers/lvgl/src/widgets/slider/../bar/../label/../../draw/lv_draw.h \
  ../Drivers/lvgl/src/widgets/slider/lv_slider.h \
  ../Drivers/lvgl/src/widgets/slider/../bar/lv_bar.h \
  ../Drivers/lvgl/src/widgets/slider/../../misc/lv_area_private.h \
@@ -157,22 +141,7 @@ Drivers/lvgl/src/widgets/slider/lv_slider.o: \
  ../Drivers/lvgl/src/widgets/slider/../../core/lv_obj_event_private.h \
  ../Drivers/lvgl/src/widgets/slider/../../core/lv_obj_event.h \
  ../Drivers/lvgl/src/widgets/slider/../../core/lv_obj_class_private.h \
- ../Drivers/lvgl/src/widgets/slider/../../core/lv_obj_class.h \
- ../Drivers/lvgl/src/widgets/slider/../../misc/lv_assert.h \
- ../Drivers/lvgl/src/widgets/slider/../../core/lv_group.h \
- ../Drivers/lvgl/src/widgets/slider/../../indev/lv_indev.h \
- ../Drivers/lvgl/src/widgets/slider/../../indev/lv_indev_private.h \
- ../Drivers/lvgl/src/widgets/slider/../../indev/lv_indev.h \
- ../Drivers/lvgl/src/widgets/slider/../../indev/../misc/lv_anim.h \
- ../Drivers/lvgl/src/widgets/slider/../../display/lv_display.h \
- ../Drivers/lvgl/src/widgets/slider/../../draw/lv_draw.h \
- ../Drivers/lvgl/src/widgets/slider/../../stdlib/lv_string.h \
- ../Drivers/lvgl/src/widgets/slider/../../misc/lv_math.h \
- ../Drivers/lvgl/src/widgets/slider/../image/lv_image.h \
- ../Drivers/lvgl/src/widgets/slider/../image/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/slider/../image/../../core/lv_obj.h \
- ../Drivers/lvgl/src/widgets/slider/../image/../../misc/lv_fs.h \
- ../Drivers/lvgl/src/widgets/slider/../image/../../draw/lv_draw.h
+ ../Drivers/lvgl/src/widgets/slider/../../core/lv_obj_class.h
 ../Drivers/lvgl/src/widgets/slider/lv_slider_private.h:
 ../Drivers/lvgl/src/widgets/slider/../bar/lv_bar_private.h:
 ../Drivers/lvgl/src/widgets/slider/../bar/../../core/lv_obj_private.h:
@@ -237,12 +206,6 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/../layouts/lv_layout.h:
 ../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/../layouts/../lv_conf_internal.h:
 ../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/../layouts/../misc/lv_types.h:
-../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/../layouts/flex/lv_flex.h:
-../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/../layouts/flex/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/../layouts/flex/../../misc/lv_area.h:
-../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/../layouts/grid/lv_grid.h:
-../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/../layouts/grid/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/../layouts/grid/../../misc/lv_area.h:
 ../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/lv_style_gen.h:
 ../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/lv_area.h:
 ../Drivers/lvgl/src/widgets/slider/../bar/../../core/../misc/lv_color.h:
@@ -312,16 +275,6 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/widgets/slider/../bar/../../core/lv_group.h:
 ../Drivers/lvgl/src/widgets/slider/../bar/lv_bar.h:
 ../Drivers/lvgl/src/widgets/slider/../bar/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/slider/../bar/../../core/lv_obj.h:
-../Drivers/lvgl/src/widgets/slider/../bar/../../misc/lv_anim.h:
-../Drivers/lvgl/src/widgets/slider/../bar/../label/lv_label.h:
-../Drivers/lvgl/src/widgets/slider/../bar/../label/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/slider/../bar/../label/../../misc/lv_types.h:
-../Drivers/lvgl/src/widgets/slider/../bar/../label/../../core/lv_obj.h:
-../Drivers/lvgl/src/widgets/slider/../bar/../label/../../font/lv_font.h:
-../Drivers/lvgl/src/widgets/slider/../bar/../label/../../font/lv_symbol_def.h:
-../Drivers/lvgl/src/widgets/slider/../bar/../label/../../misc/lv_text.h:
-../Drivers/lvgl/src/widgets/slider/../bar/../label/../../draw/lv_draw.h:
 ../Drivers/lvgl/src/widgets/slider/lv_slider.h:
 ../Drivers/lvgl/src/widgets/slider/../bar/lv_bar.h:
 ../Drivers/lvgl/src/widgets/slider/../../misc/lv_area_private.h:
@@ -331,18 +284,3 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/widgets/slider/../../core/lv_obj_event.h:
 ../Drivers/lvgl/src/widgets/slider/../../core/lv_obj_class_private.h:
 ../Drivers/lvgl/src/widgets/slider/../../core/lv_obj_class.h:
-../Drivers/lvgl/src/widgets/slider/../../misc/lv_assert.h:
-../Drivers/lvgl/src/widgets/slider/../../core/lv_group.h:
-../Drivers/lvgl/src/widgets/slider/../../indev/lv_indev.h:
-../Drivers/lvgl/src/widgets/slider/../../indev/lv_indev_private.h:
-../Drivers/lvgl/src/widgets/slider/../../indev/lv_indev.h:
-../Drivers/lvgl/src/widgets/slider/../../indev/../misc/lv_anim.h:
-../Drivers/lvgl/src/widgets/slider/../../display/lv_display.h:
-../Drivers/lvgl/src/widgets/slider/../../draw/lv_draw.h:
-../Drivers/lvgl/src/widgets/slider/../../stdlib/lv_string.h:
-../Drivers/lvgl/src/widgets/slider/../../misc/lv_math.h:
-../Drivers/lvgl/src/widgets/slider/../image/lv_image.h:
-../Drivers/lvgl/src/widgets/slider/../image/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/slider/../image/../../core/lv_obj.h:
-../Drivers/lvgl/src/widgets/slider/../image/../../misc/lv_fs.h:
-../Drivers/lvgl/src/widgets/slider/../image/../../draw/lv_draw.h:

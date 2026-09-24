@@ -63,12 +63,6 @@ Drivers/lvgl/src/widgets/span/lv_span.o: \
  ../Drivers/lvgl/src/widgets/span/../../core/../misc/../layouts/lv_layout.h \
  ../Drivers/lvgl/src/widgets/span/../../core/../misc/../layouts/../lv_conf_internal.h \
  ../Drivers/lvgl/src/widgets/span/../../core/../misc/../layouts/../misc/lv_types.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../misc/../layouts/flex/lv_flex.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../misc/../layouts/flex/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../misc/../layouts/flex/../../misc/lv_area.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../misc/../layouts/grid/lv_grid.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../misc/../layouts/grid/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../misc/../layouts/grid/../../misc/lv_area.h \
  ../Drivers/lvgl/src/widgets/span/../../core/../misc/lv_style_gen.h \
  ../Drivers/lvgl/src/widgets/span/../../core/../misc/lv_area.h \
  ../Drivers/lvgl/src/widgets/span/../../core/../misc/lv_color.h \
@@ -143,69 +137,7 @@ Drivers/lvgl/src/widgets/span/lv_span.o: \
  ../Drivers/lvgl/src/widgets/span/../../misc/lv_area.h \
  ../Drivers/lvgl/src/widgets/span/../../draw/lv_draw_private.h \
  ../Drivers/lvgl/src/widgets/span/../../draw/lv_draw.h \
- ../Drivers/lvgl/src/widgets/span/../../core/lv_obj_class_private.h \
- ../Drivers/lvgl/src/widgets/span/../../misc/lv_assert.h \
- ../Drivers/lvgl/src/widgets/span/../../misc/lv_text_private.h \
- ../Drivers/lvgl/src/widgets/span/../../misc/lv_text.h \
- ../Drivers/lvgl/src/widgets/span/../../core/lv_global.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/lv_draw.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/lv_draw_sw.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../lv_draw.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../../misc/lv_area.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../../display/lv_display.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../../osal/lv_os.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../lv_draw_vector.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../../misc/lv_array.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../../misc/lv_matrix.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../lv_draw_image.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../lv_draw_triangle.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../lv_draw_rect.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../lv_draw_label.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../lv_draw_image.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../lv_draw_line.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../lv_draw_arc.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/blend/lv_draw_sw_blend.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/blend/../lv_draw_sw_mask.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/blend/../../../misc/lv_area.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/blend/../../../misc/lv_color.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/blend/../../../misc/lv_math.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/blend/../../../misc/lv_types.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/blend/../../../misc/lv_color.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/blend/../../../misc/lv_area.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/blend/../../../misc/lv_style.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../misc/lv_color_op.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../misc/lv_ll.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../misc/lv_log.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../misc/lv_timer.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../osal/lv_os.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../others/sysmon/lv_sysmon.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../others/sysmon/../../misc/lv_timer.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../others/sysmon/../../others/observer/lv_observer.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../others/sysmon/../../others/observer/../../core/lv_obj.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../stdlib/builtin/lv_tlsf.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../stdlib/builtin/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../stdlib/builtin/../../osal/lv_os.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../stdlib/builtin/../../misc/lv_ll.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../stdlib/builtin/../../misc/lv_types.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../tick/lv_tick.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../layouts/lv_layout.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../misc/lv_timer_private.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../misc/lv_anim_private.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../tick/lv_tick_private.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../tick/lv_tick.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/lv_draw_buf_private.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/lv_draw_private.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/lv_draw_sw_private.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/lv_draw_sw.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../lv_draw_private.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/lv_draw_sw_mask_private.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/lv_draw_sw_mask.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../stdlib/builtin/lv_tlsf_private.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../stdlib/builtin/lv_tlsf.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../others/sysmon/lv_sysmon_private.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../others/sysmon/lv_sysmon.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../layouts/lv_layout_private.h \
- ../Drivers/lvgl/src/widgets/span/../../core/../layouts/lv_layout.h
+ ../Drivers/lvgl/src/widgets/span/../../core/lv_obj_class_private.h
 ../Drivers/lvgl/src/widgets/span/lv_span_private.h:
 ../Drivers/lvgl/src/widgets/span/../../core/lv_obj_private.h:
 ../Drivers/lvgl/src/widgets/span/../../core/lv_obj.h:
@@ -269,12 +201,6 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/widgets/span/../../core/../misc/../layouts/lv_layout.h:
 ../Drivers/lvgl/src/widgets/span/../../core/../misc/../layouts/../lv_conf_internal.h:
 ../Drivers/lvgl/src/widgets/span/../../core/../misc/../layouts/../misc/lv_types.h:
-../Drivers/lvgl/src/widgets/span/../../core/../misc/../layouts/flex/lv_flex.h:
-../Drivers/lvgl/src/widgets/span/../../core/../misc/../layouts/flex/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/span/../../core/../misc/../layouts/flex/../../misc/lv_area.h:
-../Drivers/lvgl/src/widgets/span/../../core/../misc/../layouts/grid/lv_grid.h:
-../Drivers/lvgl/src/widgets/span/../../core/../misc/../layouts/grid/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/span/../../core/../misc/../layouts/grid/../../misc/lv_area.h:
 ../Drivers/lvgl/src/widgets/span/../../core/../misc/lv_style_gen.h:
 ../Drivers/lvgl/src/widgets/span/../../core/../misc/lv_area.h:
 ../Drivers/lvgl/src/widgets/span/../../core/../misc/lv_color.h:
@@ -350,65 +276,3 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/widgets/span/../../draw/lv_draw_private.h:
 ../Drivers/lvgl/src/widgets/span/../../draw/lv_draw.h:
 ../Drivers/lvgl/src/widgets/span/../../core/lv_obj_class_private.h:
-../Drivers/lvgl/src/widgets/span/../../misc/lv_assert.h:
-../Drivers/lvgl/src/widgets/span/../../misc/lv_text_private.h:
-../Drivers/lvgl/src/widgets/span/../../misc/lv_text.h:
-../Drivers/lvgl/src/widgets/span/../../core/lv_global.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/lv_draw.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/lv_draw_sw.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../lv_draw.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../../misc/lv_area.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../../display/lv_display.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../../osal/lv_os.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../lv_draw_vector.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../../misc/lv_array.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../../misc/lv_matrix.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../lv_draw_image.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../lv_draw_triangle.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../lv_draw_rect.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../lv_draw_label.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../lv_draw_image.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../lv_draw_line.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../lv_draw_arc.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/blend/lv_draw_sw_blend.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/blend/../lv_draw_sw_mask.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/blend/../../../misc/lv_area.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/blend/../../../misc/lv_color.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/blend/../../../misc/lv_math.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/blend/../../../misc/lv_types.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/blend/../../../misc/lv_color.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/blend/../../../misc/lv_area.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/blend/../../../misc/lv_style.h:
-../Drivers/lvgl/src/widgets/span/../../core/../misc/lv_color_op.h:
-../Drivers/lvgl/src/widgets/span/../../core/../misc/lv_ll.h:
-../Drivers/lvgl/src/widgets/span/../../core/../misc/lv_log.h:
-../Drivers/lvgl/src/widgets/span/../../core/../misc/lv_timer.h:
-../Drivers/lvgl/src/widgets/span/../../core/../osal/lv_os.h:
-../Drivers/lvgl/src/widgets/span/../../core/../others/sysmon/lv_sysmon.h:
-../Drivers/lvgl/src/widgets/span/../../core/../others/sysmon/../../misc/lv_timer.h:
-../Drivers/lvgl/src/widgets/span/../../core/../others/sysmon/../../others/observer/lv_observer.h:
-../Drivers/lvgl/src/widgets/span/../../core/../others/sysmon/../../others/observer/../../core/lv_obj.h:
-../Drivers/lvgl/src/widgets/span/../../core/../stdlib/builtin/lv_tlsf.h:
-../Drivers/lvgl/src/widgets/span/../../core/../stdlib/builtin/../../lv_conf_internal.h:
-../Drivers/lvgl/src/widgets/span/../../core/../stdlib/builtin/../../osal/lv_os.h:
-../Drivers/lvgl/src/widgets/span/../../core/../stdlib/builtin/../../misc/lv_ll.h:
-../Drivers/lvgl/src/widgets/span/../../core/../stdlib/builtin/../../misc/lv_types.h:
-../Drivers/lvgl/src/widgets/span/../../core/../tick/lv_tick.h:
-../Drivers/lvgl/src/widgets/span/../../core/../layouts/lv_layout.h:
-../Drivers/lvgl/src/widgets/span/../../core/../misc/lv_timer_private.h:
-../Drivers/lvgl/src/widgets/span/../../core/../misc/lv_anim_private.h:
-../Drivers/lvgl/src/widgets/span/../../core/../tick/lv_tick_private.h:
-../Drivers/lvgl/src/widgets/span/../../core/../tick/lv_tick.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/lv_draw_buf_private.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/lv_draw_private.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/lv_draw_sw_private.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/lv_draw_sw.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/../lv_draw_private.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/lv_draw_sw_mask_private.h:
-../Drivers/lvgl/src/widgets/span/../../core/../draw/sw/lv_draw_sw_mask.h:
-../Drivers/lvgl/src/widgets/span/../../core/../stdlib/builtin/lv_tlsf_private.h:
-../Drivers/lvgl/src/widgets/span/../../core/../stdlib/builtin/lv_tlsf.h:
-../Drivers/lvgl/src/widgets/span/../../core/../others/sysmon/lv_sysmon_private.h:
-../Drivers/lvgl/src/widgets/span/../../core/../others/sysmon/lv_sysmon.h:
-../Drivers/lvgl/src/widgets/span/../../core/../layouts/lv_layout_private.h:
-../Drivers/lvgl/src/widgets/span/../../core/../layouts/lv_layout.h:

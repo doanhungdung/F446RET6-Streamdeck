@@ -7,15 +7,6 @@ Drivers/lvgl/src/layouts/lv_layout.o: \
  E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h \
  ../Drivers/lvgl/src/layouts/../misc/lv_types.h \
  ../Drivers/lvgl/src/layouts/../misc/../lv_conf_internal.h \
- ../Drivers/lvgl/src/layouts/flex/lv_flex.h \
- ../Drivers/lvgl/src/layouts/flex/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/layouts/flex/../../misc/lv_area.h \
- ../Drivers/lvgl/src/layouts/flex/../../misc/../lv_conf_internal.h \
- ../Drivers/lvgl/src/layouts/flex/../../misc/lv_types.h \
- ../Drivers/lvgl/src/layouts/flex/../../misc/lv_math.h \
- ../Drivers/lvgl/src/layouts/grid/lv_grid.h \
- ../Drivers/lvgl/src/layouts/grid/../../lv_conf_internal.h \
- ../Drivers/lvgl/src/layouts/grid/../../misc/lv_area.h \
  ../Drivers/lvgl/src/layouts/../core/lv_global.h \
  ../Drivers/lvgl/src/layouts/../core/../lv_conf_internal.h \
  ../Drivers/lvgl/src/layouts/../core/../misc/lv_types.h \
@@ -30,16 +21,16 @@ Drivers/lvgl/src/layouts/lv_layout.o: \
  ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/lv_draw_buf.h \
  ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_types.h \
  ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_area.h \
- ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_color.h \
  ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/../lv_conf_internal.h \
+ ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_types.h \
+ ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_math.h \
+ ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_color.h \
  ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_assert.h \
  ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_log.h \
- ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_types.h \
  ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/../stdlib/lv_mem.h \
  ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/../stdlib/../lv_conf_internal.h \
  ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/../stdlib/lv_string.h \
  ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/../stdlib/../misc/lv_types.h \
- ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_math.h \
  ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_palette.h \
  ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_color.h \
  ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_color_op.h \
@@ -211,15 +202,6 @@ Drivers/lvgl/src/layouts/lv_layout.o: \
 E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/layouts/../misc/lv_types.h:
 ../Drivers/lvgl/src/layouts/../misc/../lv_conf_internal.h:
-../Drivers/lvgl/src/layouts/flex/lv_flex.h:
-../Drivers/lvgl/src/layouts/flex/../../lv_conf_internal.h:
-../Drivers/lvgl/src/layouts/flex/../../misc/lv_area.h:
-../Drivers/lvgl/src/layouts/flex/../../misc/../lv_conf_internal.h:
-../Drivers/lvgl/src/layouts/flex/../../misc/lv_types.h:
-../Drivers/lvgl/src/layouts/flex/../../misc/lv_math.h:
-../Drivers/lvgl/src/layouts/grid/lv_grid.h:
-../Drivers/lvgl/src/layouts/grid/../../lv_conf_internal.h:
-../Drivers/lvgl/src/layouts/grid/../../misc/lv_area.h:
 ../Drivers/lvgl/src/layouts/../core/lv_global.h:
 ../Drivers/lvgl/src/layouts/../core/../lv_conf_internal.h:
 ../Drivers/lvgl/src/layouts/../core/../misc/lv_types.h:
@@ -234,16 +216,16 @@ E:/STM32CubeIDE/F446RET6\ Streamdeck/Drivers/lv_conf.h:
 ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/lv_draw_buf.h:
 ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_types.h:
 ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_area.h:
-../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_color.h:
 ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/../lv_conf_internal.h:
+../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_types.h:
+../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_math.h:
+../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_color.h:
 ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_assert.h:
 ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_log.h:
-../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_types.h:
 ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/../stdlib/lv_mem.h:
 ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/../stdlib/../lv_conf_internal.h:
 ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/../stdlib/lv_string.h:
 ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/../stdlib/../misc/lv_types.h:
-../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_math.h:
 ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_palette.h:
 ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_color.h:
 ../Drivers/lvgl/src/layouts/../core/../draw/../misc/../font/../draw/../misc/lv_color_op.h:
