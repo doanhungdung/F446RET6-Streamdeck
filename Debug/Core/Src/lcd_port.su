@@ -1,4 +1,8 @@
-../Core/Src/lcd_port.c:55:13:lcd_send_cmd	24	static
-../Core/Src/lcd_port.c:72:13:lcd_send_color	24	static
-../Core/Src/lcd_port.c:97:6:HAL_SPI_TxCpltCallback	16	static
-../Core/Src/lcd_port.c:106:6:lcd_init	16	static
+../Core/Src/lcd_port.c:62:13:spi1_gpio_init	4	static
+../Core/Src/lcd_port.c:81:13:spi1_init	8	static
+../Core/Src/lcd_port.c:107:13:spi1_transmit_blocking	24	static
+../Core/Src/lcd_port.c:118:13:spi1_transmit_dma	16	static
+../Core/Src/lcd_port.c:147:6:DMA2_Stream3_IRQHandler	8	static
+../Core/Src/lcd_port.c:157:13:lcd_send_cmd	24	static
+../Core/Src/lcd_port.c:174:13:lcd_send_color	24	static
+../Core/Src/lcd_port.c:197:6:lcd_init	16	static

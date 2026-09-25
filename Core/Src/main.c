@@ -44,8 +44,8 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-SPI_HandleTypeDef hspi1;
-DMA_HandleTypeDef hdma_spi1_tx;
+/* hspi1 / hdma_spi1_tx KHÔNG dùng nữa: SPI1 + DMA2_Stream3 được cấu hình và
+ * điều khiển trực tiếp bằng thanh ghi trong lcd_port.c (spi1_init(), v.v.) */
 
 /* USER CODE BEGIN PV */
 static uint8_t btn_last = 0xFF;
@@ -55,7 +55,6 @@ static uint8_t btn_last = 0xFF;
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
-static void MX_SPI1_Init(void);
 static void MX_TIM3_Init(void);
 /* USER CODE BEGIN PFP */
 static void Buttons_Init(void);
@@ -211,14 +210,7 @@ static void Button_Action(uint8_t idx)
     case 1: HID_Keyboard_Combo(MOD_CTRL, KEY_V); break;               /* PC1: Ctrl+V */
     case 2: HID_Keyboard_Combo(MOD_GUI | MOD_SHIFT, KEY_S); break;    /* PC2: Win+Shift+S */
 
-    case 3:                                                           /* PC3: mở cmd */
-        HID_Keyboard_Combo(MOD_GUI, KEY_R);  /* Win+R */
-        HAL_Delay(400);                      /* chờ hộp thoại Run hiện ra */
-        HID_Key(KEY_C);
-        HID_Key(KEY_M);
-        HID_Key(KEY_D);
-        HID_Key(KEY_ENTER);
-        break;
+    case 3: HID_Keyboard_Combo(MOD_CTRL, KEY_D); break;                                                              /* PC3: tắt mic */
 
     case 4:                                                           /* PC4: mở app Claude */
         HID_Keyboard_Combo(MOD_GUI, 0);      /* bấm Win: mở Start */
@@ -233,7 +225,7 @@ static void Button_Action(uint8_t idx)
         HID_Key(KEY_ENTER);
         break;
 
-    case 5: HID_Keyboard_Combo(MOD_CTRL, KEY_D); break;               /* PC5: Ctrl+D */
+    case 5: HID_Keyboard_Combo(MOD_GUI, KEY_L); break;               /* PC5: Ctrl+D */
     }
 }
 
@@ -727,7 +719,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_DMA_Init();
-  MX_SPI1_Init();
+  /* MX_SPI1_Init() đã bỏ: SPI1 được lcd_init() -> spi1_init() (trong lcd_port.c) cấu hình bằng thanh ghi */
   MX_USB_DEVICE_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
@@ -851,43 +843,7 @@ void SystemClock_Config(void)
   HAL_InitTick(TICK_INT_PRIORITY);          /* cấu hình lại SysTick = 1 ms   */
 }
 
-/**
-  * @brief SPI1 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_SPI1_Init(void)
-{
-
-  /* USER CODE BEGIN SPI1_Init 0 */
-
-  /* USER CODE END SPI1_Init 0 */
-
-  /* USER CODE BEGIN SPI1_Init 1 */
-
-  /* USER CODE END SPI1_Init 1 */
-  /* SPI1 parameter configuration*/
-  hspi1.Instance = SPI1;
-  hspi1.Init.Mode = SPI_MODE_MASTER;
-  hspi1.Init.Direction = SPI_DIRECTION_2LINES;
-  hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
-  hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
-  hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
-  hspi1.Init.NSS = SPI_NSS_SOFT;
-  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
-  hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
-  hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
-  hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
-  hspi1.Init.CRCPolynomial = 10;
-  if (HAL_SPI_Init(&hspi1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN SPI1_Init 2 */
-
-  /* USER CODE END SPI1_Init 2 */
-
-}
+/* MX_SPI1_Init() đã bỏ hoàn toàn: xem spi1_init() trong lcd_port.c (thanh ghi) */
 
 /**
   * @brief TIM3 Initialization Function (viết lại bằng thanh ghi)
